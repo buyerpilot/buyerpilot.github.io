@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sourcepilot — Alibaba & 1688 Supplier Ranking Assistant</title>
+  <meta name="description" content="Compare and rank Alibaba and 1688 suppliers using pricing, ratings, seller tenure, repeat-purchase signals and verification data—directly in your browser.">
+  <meta name="theme-color" content="#060b14">
+  <meta property="og:title" content="Sourcepilot — Rank suppliers. Source with evidence.">
+  <meta property="og:description" content="Alibaba and 1688 supplier intelligence directly inside your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sourcepilot-app.github.io/">
+  <meta property="og:image" content="https://sourcepilot-app.github.io/assets/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://sourcepilot-app.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Sourcepilot home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h8.5C17.7 4 20 6.2 20 9.3s-2.3 5.3-6.5 5.3H10V20H5V4Zm5 4v2.7h3.4c1.1 0 1.7-.5 1.7-1.35S14.5 8 13.4 8H10Z" fill="url(#logoGradient)"/><circle cx="18.4" cy="18.4" r="2.4" fill="#22c55e"/><defs><linearGradient id="logoGradient" x1="5" y1="4" x2="20" y2="20"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs></svg>
+        </span>
+        Sourcepilot
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#demo">Product demo</a>
+        <a href="#features">Features</a>
+        <a href="#scoring">How scoring works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="button button-secondary button-small" href="#demo">See it in action</a>
+        <a class="button button-primary button-small" href="#pricing" data-checkout="trial">Start free trial</a>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
+      <a href="#demo">Product demo</a>
+      <a href="#features">Features</a>
+      <a href="#scoring">How scoring works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing" data-checkout="trial">Start 7-day free trial</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge"><span class="pulse"></span> Alibaba + 1688 supplier intelligence</div>
+          <h1>Rank suppliers.<br><span class="gradient-text">Source with evidence.</span></h1>
+          <p>Sourcepilot compares suppliers using pricing, ratings, seller tenure, repeat-purchase signals, business information and marketplace verification—directly on the Alibaba and 1688 pages you already use.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pricing" data-checkout="trial">Start 7-Day Free Trial <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#demo">Watch the product demo</a>
+          </div>
+          <ul class="hero-points">
+            <li>All Pro features during trial</li>
+            <li>Up to 50 ranking sessions</li>
+            <li>No separate sourcing dashboard</li>
+          </ul>
+        </div>
+
+        <div class="hero-card" aria-label="Sourcepilot running on 1688">
+          <div class="browser-frame">
+            <div class="browser-top"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-address"></span></div>
+            <img src="assets/demo-1688.webp" width="1512" height="814" alt="Sourcepilot supplier ranking panel displayed over a 1688 product search page">
+          </div>
+          <div class="floating-stat"><strong>Live supplier ranking</strong><span>Scores, confidence and product links</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Product highlights">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Alibaba + 1688</strong><span>Separate data and ranking logic</span></div>
+        <div class="trust-item"><strong>Quantity-aware pricing</strong><span>Compare applicable product tiers</span></div>
+        <div class="trust-item"><strong>Score confidence</strong><span>See when supplier data is limited</span></div>
+        <div class="trust-item"><strong>Complete CSV data</strong><span>Available on Pro and Lifetime</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Real product demonstration</span>
+          <h2>From crowded search results to a usable supplier shortlist</h2>
+          <p>Sourcepilot gathers marketplace data, ranks suppliers, and keeps the result attached to the page you are researching.</p>
+        </div>
+
+        <div class="demo-shell">
+          <div class="demo-tabs" role="tablist" aria-label="Sourcepilot demo views">
+            <button class="demo-tab active" type="button" role="tab" aria-selected="true" data-demo-tab="ranking">1688 ranking panel</button>
+            <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="alibaba">Alibaba seller data</button>
+            <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="csv">Complete CSV export</button>
+          </div>
+
+          <div class="demo-panel active" role="tabpanel" data-demo-panel="ranking">
+            <div class="demo-image"><img src="assets/demo-1688.webp" width="1512" height="814" alt="1688 search results with Sourcepilot ranking sidebar"></div>
+            <div class="demo-copy">
+              <span class="platform-label">1688 workflow</span>
+              <h3>Compare selected products without leaving the search page</h3>
+              <p>Choose relevant listings, set the ranking quantity, and review the strongest suppliers in one movable panel.</p>
+              <ul><li>English-readable supplier names</li><li>Years on platform and repurchase signals</li><li>Business type and merchant status</li><li>Direct links to products and stores</li></ul>
+            </div>
+          </div>
+
+          <div class="demo-panel" role="tabpanel" data-demo-panel="alibaba">
+            <div class="demo-image"><img src="assets/demo-alibaba.webp" width="1682" height="809" alt="Alibaba product page showing seller rating, reorder rate, business type and pricing tiers"></div>
+            <div class="demo-copy">
+              <span class="platform-label">Alibaba workflow</span>
+              <h3>Use seller and product evidence—not one headline number</h3>
+              <p>Sourcepilot reads supplier and product indicators that are spread across Alibaba product pages and embedded marketplace data.</p>
+              <ul><li>Seller and product ratings</li><li>Reorder rate and years on Alibaba</li><li>Trade Assurance and certification</li><li>Business type, revenue indicators and sold count</li></ul>
+            </div>
+          </div>
+
+          <div class="demo-panel" role="tabpanel" data-demo-panel="csv">
+            <div class="demo-image"><img src="assets/demo-csv.webp" width="1682" height="655" alt="Sourcepilot supplier comparison exported to a spreadsheet"></div>
+            <div class="demo-copy">
+              <span class="platform-label">Pro data export</span>
+              <h3>Keep the entire supplier research file—not only the final rank</h3>
+              <p>Export the underlying data to Excel or Google Sheets so you can filter, audit, share and preserve your sourcing work.</p>
+              <ul><li>Rank, score and score confidence</li><li>Pricing, ratings and seller tenure</li><li>Business type, verification and revenue fields</li><li>Store URLs and every selected product URL</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Built for supplier research</span>
+          <h2>Stop comparing suppliers across dozens of tabs</h2>
+          <p>Sourcepilot turns marketplace data into a structured shortlist while keeping you in control of which products are compared.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-card"><div class="icon-box">✓</div><h3>Select only relevant listings</h3><p>Checkboxes appear on product cards so irrelevant styles, materials or offers can be excluded before ranking.</p></article>
+          <article class="card feature-card"><div class="icon-box">↕</div><h3>Rank by intended quantity</h3><p>Use the price tier applicable to your planned order quantity instead of blindly selecting the lowest advertised variation.</p></article>
+          <article class="card feature-card"><div class="icon-box">#</div><h3>Group repeated suppliers</h3><p>Multiple products from the same seller are consolidated so one supplier does not dominate the shortlist through duplicate listings.</p></article>
+          <article class="card feature-card"><div class="icon-box">◎</div><h3>Platform-specific scoring</h3><p>Alibaba and 1688 use independent extraction, ranking factors and export fields instead of forcing both marketplaces into one model.</p></article>
+          <article class="card feature-card"><div class="icon-box">◔</div><h3>Pause for verification</h3><p>When a marketplace asks for CAPTCHA or browser verification, scanning pauses so you can complete it manually before restarting.</p></article>
+          <article class="card feature-card"><div class="icon-box">⇩</div><h3>Export complete supplier intelligence</h3><p>Pro users can download rankings and the supporting supplier data for permanent comparison, audit and team sharing.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">How it works</span>
+          <h2>A sourcing workflow that stays inside your browser</h2>
+        </div>
+        <div class="steps">
+          <article class="card step-card"><span class="step-number">01</span><h3>Search normally</h3><p>Open an Alibaba or 1688 keyword or image-search results page as you normally would.</p></article>
+          <article class="card step-card"><span class="step-number">02</span><h3>Select and rank</h3><p>Keep the products that match your requirement, choose the order quantity, and run the ranking.</p></article>
+          <article class="card step-card"><span class="step-number">03</span><h3>Review or export</h3><p>Inspect top suppliers in the panel, visit stores, or export the complete comparison file on Pro.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="scoring">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Transparent supplier scoring</span>
+          <h2>Designed to support a shortlist—not replace due diligence</h2>
+          <p>Sourcepilot uses available marketplace evidence and displays score confidence when data is incomplete.</p>
+        </div>
+
+        <div class="score-layout">
+          <div class="card score-summary">
+            <h3>Example balanced scoring factors</h3>
+            <p>Weights differ by marketplace because Alibaba and 1688 expose different supplier signals.</p>
+            <div class="factor-list">
+              <div class="factor"><div class="factor-top"><span>Seller quality signals</span><span>Ratings + repeat purchase</span></div><div class="factor-bar"><span style="width:82%"></span></div></div>
+              <div class="factor"><div class="factor-top"><span>Commercial fit</span><span>Price + sold activity</span></div><div class="factor-bar"><span style="width:72%"></span></div></div>
+              <div class="factor"><div class="factor-top"><span>Business credibility</span><span>Tenure + status + type</span></div><div class="factor-bar"><span style="width:68%"></span></div></div>
+              <div class="factor"><div class="factor-top"><span>Available-data coverage</span><span>Score confidence</span></div><div class="factor-bar"><span style="width:88%"></span></div></div>
+            </div>
+            <div class="trust-note">Missing marketplace information is shown as unavailable. A high rank is a research signal, not a guarantee of product quality, delivery or supplier performance.</div>
+          </div>
+
+          <div class="score-grid">
+            <article class="card platform-card">
+              <span class="platform-label">Alibaba</span>
+              <h3>Alibaba ranking inputs</h3>
+              <p>Uses supplier and product data available across Alibaba pages and embedded marketplace information.</p>
+              <div class="metric-chips"><span class="metric-chip">Seller rating</span><span class="metric-chip">Reorder rate</span><span class="metric-chip">Years on platform</span><span class="metric-chip">Certification</span><span class="metric-chip">Price</span><span class="metric-chip">Product rating</span><span class="metric-chip">Sold count</span><span class="metric-chip">Trade Assurance</span><span class="metric-chip">Business type</span><span class="metric-chip">Online revenue</span></div>
+            </article>
+            <article class="card platform-card">
+              <span class="platform-label">1688</span>
+              <h3>1688 ranking inputs</h3>
+              <p>Uses 1688-specific factory, merchant and repeat-purchase signals without mixing Alibaba fields into the calculation.</p>
+              <div class="metric-chips"><span class="metric-chip">Seller rating</span><span class="metric-chip">Repurchase rate</span><span class="metric-chip">Price</span><span class="metric-chip">Years on platform</span><span class="metric-chip">Source Factory</span><span class="metric-chip">Business type</span><span class="metric-chip">Merchant status</span><span class="metric-chip">Sold count</span><span class="metric-chip">Verified membership</span></div>
+            </article>
+            <article class="card platform-card">
+              <span class="platform-label">Confidence</span>
+              <h3>Know when data is limited</h3>
+              <p>Score confidence reflects how much weighted supplier information was available for the comparison, helping you distinguish a strong evidence-backed score from a partial-data result.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Launch pricing</span>
+          <h2>Start free. Upgrade when the supplier data becomes valuable.</h2>
+          <p>Test the complete Pro workflow for seven days before choosing a plan.</p>
+        </div>
+
+        <div class="pricing-top-note"><strong>7-Day Full Trial:</strong> all Pro features, including complete CSV export, with a maximum of 50 ranking sessions.</div>
+
+        <div class="pricing-grid">
+          <article class="card price-card">
+            <span class="discount-badge">Launch offer · 33% off</span>
+            <h3 class="price-name">Starter</h3>
+            <div class="price-row"><span class="price-current">$9.99</span><span class="price-period">/month</span></div>
+            <div class="price-regular">Regular price <s>$14.99/month</s></div>
+            <p>For individual buyers who need reliable rankings during regular product research.</p>
+            <ul>
+              <li>Alibaba + 1688 support</li>
+              <li>25 ranking sessions per day</li>
+              <li>Supplier scores and rank positions</li>
+              <li>Standard ranking profiles</li>
+              <li>Score confidence and product links</li>
+              <li class="not-included">Complete CSV data export</li>
+              <li class="not-included">Custom ranking weights</li>
+            </ul>
+            <a class="button button-secondary button-block" href="#" data-checkout="starter">Start Basic Ranking</a>
+          </article>
+
+          <article class="card price-card featured">
+            <span class="popular-badge">Best value</span>
+            <span class="discount-badge">Launch offer · 33% off</span>
+            <h3 class="price-name">Pro</h3>
+            <div class="price-row"><span class="price-current">$19.99</span><span class="price-period">/month</span></div>
+            <div class="price-regular">Regular price <s>$29.99/month</s></div>
+            <p>For serious sourcing research, ongoing comparisons and permanent supplier records.</p>
+            <div class="csv-highlight"><strong>Export complete supplier intelligence to CSV</strong><span>Keep every ranking, price, rating, business signal and product link in Excel or Google Sheets.</span></div>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>Unlimited ranking sessions</li>
+              <li>Custom ranking profiles and weights</li>
+              <li>Full supplier data export to CSV</li>
+              <li>Save, filter and compare in Excel</li>
+              <li>Share sourcing files with your team</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="button button-primary button-block" href="#" data-checkout="pro">Unlock Rankings + Full Data Export</a>
+          </article>
+
+          <article class="card price-card">
+            <span class="discount-badge">Founder offer · 40% off</span>
+            <h3 class="price-name">Founder Lifetime</h3>
+            <div class="price-row"><span class="price-current">$299</span><span class="price-period">one time</span></div>
+            <div class="price-regular">Regular price <s>$499</s></div>
+            <p>One payment for buyers who want permanent access to the current Sourcepilot product.</p>
+            <div class="csv-highlight"><strong>Complete CSV export included forever</strong><span>Keep permanent supplier intelligence files without a monthly subscription.</span></div>
+            <ul>
+              <li>All current Pro features</li>
+              <li>Unlimited ranking sessions</li>
+              <li>Custom ranking profiles and weights</li>
+              <li>Full supplier data export to CSV</li>
+              <li>Future updates to the current extension</li>
+              <li>Priority support</li>
+              <li>Limited to the first 50 customers</li>
+            </ul>
+            <a class="button button-secondary button-block" href="#" data-checkout="lifetime">Get Lifetime Access — Save $200</a>
+          </article>
+        </div>
+
+        <p class="price-footnote">Launch discounts compare against the stated regular prices that Sourcepilot intends to charge after the launch promotion. Taxes may be added by the payment provider where required.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="story">
+      <div class="container">
+        <div class="card founder-card">
+          <div class="founder-visual"><div class="founder-symbol" aria-hidden="true">⌕</div></div>
+          <div class="founder-copy">
+            <span class="eyebrow">The founder's story</span>
+            <h2>Built after too many hours of manual supplier comparison</h2>
+            <p>Sourcepilot began as a practical solution to a familiar sourcing problem: opening product after product, copying scattered supplier information, and trying to compare businesses that present data differently across Alibaba and 1688.</p>
+            <p>The extension was built to collect those signals, keep Alibaba and 1688 logic independent, and turn selected listings into a structured shortlist. It does not promise that a score can replace supplier communication, samples or commercial checks. It is designed to make the first stage of supplier research faster and more evidence-based.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Frequently asked questions</span>
+          <h2>What buyers should know before using Sourcepilot</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Does Sourcepilot guarantee that the highest-ranked supplier is the best supplier?</summary><p>No. Sourcepilot creates a comparative shortlist from marketplace data that was available during the scan. Buyers should still contact suppliers, verify claims, order samples and complete their own commercial due diligence.</p></details>
+          <details><summary>Does Alibaba use the same calculation as 1688?</summary><p>No. Alibaba and 1688 expose different supplier fields, so Sourcepilot keeps their extraction, ranking and CSV export logic separate.</p></details>
+          <details><summary>What happens when Alibaba or 1688 shows CAPTCHA or verification?</summary><p>Sourcepilot does not bypass verification. Scanning pauses, the affected page remains available, and you can complete the marketplace verification manually before restarting the ranking process.</p></details>
+          <details><summary>Why is complete CSV export a Pro feature?</summary><p>The CSV contains the supplier intelligence behind the final rank: prices, ratings, tenure, business type, marketplace status, repeat-purchase data, confidence and source links. It lets you audit the comparison, keep permanent sourcing records and share research outside the browser.</p></details>
+          <details><summary>What does Score Confidence mean?</summary><p>Score Confidence shows how much of the weighted ranking data was actually available for that supplier. A lower-confidence result may still be useful, but it should be reviewed more carefully.</p></details>
+          <details><summary>Is Sourcepilot affiliated with Alibaba or 1688?</summary><p>No. Sourcepilot is an independent browser extension and is not endorsed by, operated by or affiliated with Alibaba.com or 1688.com.</p></details>
+          <details><summary>Which browsers are supported?</summary><p>Sourcepilot is designed for Chromium-based browsers. Publish the exact Chrome Web Store compatibility list here once your final store listing is approved.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="final-cta">
+          <span class="eyebrow">Start with the full product</span>
+          <h2>Test rankings and complete CSV export for seven days</h2>
+          <p>Use up to 50 ranking sessions with all Pro features before choosing Starter, Pro or Founder Lifetime.</p>
+          <div class="hero-actions" style="justify-content:center; margin-bottom:0">
+            <a class="button button-primary" href="#" data-checkout="trial">Start 7-Day Full Trial</a>
+            <a class="button button-secondary" href="#demo">Review the demo again</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h8.5C17.7 4 20 6.2 20 9.3s-2.3 5.3-6.5 5.3H10V20H5V4Zm5 4v2.7h3.4c1.1 0 1.7-.5 1.7-1.35S14.5 8 13.4 8H10Z" fill="#60a5fa"/><circle cx="18.4" cy="18.4" r="2.4" fill="#22c55e"/></svg></span>Sourcepilot</a>
+          <p>Supplier ranking and research tools for Alibaba and 1688. Built to help buyers compare marketplace evidence more efficiently.</p>
+        </div>
+        <div class="footer-col"><h4>Product</h4><a href="#demo">Product demo</a><a href="#features">Features</a><a href="#scoring">Scoring</a><a href="#pricing">Pricing</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="#faq">FAQ</a><a href="#" data-chrome-store>Chrome Web Store</a><a href="#" data-support-email>Contact support</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="refund.html">Refund Policy</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year></span> Sourcepilot. All rights reserved.</span><span>Sourcepilot is independent and is not affiliated with Alibaba.com or 1688.com.</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>
