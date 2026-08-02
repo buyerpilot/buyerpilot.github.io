@@ -121,7 +121,7 @@ p { color: var(--muted); }
 
 .hero { position: relative; overflow: hidden; padding: 118px 0 88px; }
 .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(148,163,184,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.035) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, #000, transparent 92%); }
-.hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 64px; }
+.hero-grid { position: relative; display: grid; grid-template-columns: .78fr 1.22fr; align-items: center; gap: 44px; }
 .hero-copy { position: relative; z-index: 2; }
 .hero-copy > p { max-width: 690px; margin-bottom: 34px; font-size: clamp(1.05rem, 2vw, 1.25rem); }
 .hero-badge { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 26px; padding: 7px 12px; border: 1px solid rgba(96,165,250,.23); border-radius: 999px; color: #bfdbfe; background: rgba(30,64,175,.14); font-size: .78rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
@@ -129,7 +129,7 @@ p { color: var(--muted); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
 .hero-points { display: flex; flex-wrap: wrap; gap: 11px 20px; padding: 0; margin: 0; list-style: none; color: #cbd5e1; font-size: .88rem; }
 .hero-points li::before { content: "✓"; margin-right: 7px; color: #4ade80; font-weight: 900; }
-.hero-card { position: relative; }
+.hero-card { position: relative; width: 108%; margin-left: -3%; }
 .hero-card::before { content: ""; position: absolute; inset: -16px; border-radius: 32px; background: linear-gradient(135deg, rgba(59,130,246,.32), rgba(139,92,246,.05)); filter: blur(28px); opacity: .65; }
 .hero-showcase-image { display: block; width: 100%; height: auto; border: 1px solid rgba(148,163,184,.2); border-radius: 24px; box-shadow: var(--shadow); background: #07101d; }
 .browser-frame { position: relative; overflow: hidden; border: 1px solid rgba(148,163,184,.2); border-radius: 24px; background: #0b1322; box-shadow: var(--shadow); }
@@ -264,7 +264,7 @@ details p { padding: 0 22px 22px; margin-bottom: 0; }
   .hero-copy { text-align: center; }
   .hero-copy > p { margin-inline: auto; }
   .hero-actions, .hero-points { justify-content: center; }
-  .hero-card { max-width: 780px; margin: 25px auto 0; }
+  .hero-card { width: 100%; max-width: 900px; margin: 25px auto 0; }
   .demo-summary { grid-template-columns: 1fr; gap: 24px; }
   .problem-grid, .feature-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid .price-card:last-child { grid-column: 1 / -1; }

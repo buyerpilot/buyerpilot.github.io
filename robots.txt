@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://sourcepilot-app.github.io/sitemap.xml

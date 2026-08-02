@@ -35,8 +35,7 @@ The Privacy Policy, Terms of Service and Refund Policy are practical launch temp
 - `privacy.html` — privacy policy
 - `terms.html` — terms of service
 - `refund.html` — refund policy
-- `demo-1688.webp`, `demo-alibaba.webp`, `demo-csv.webp` — product screenshots
-- `favicon.svg`, `og-card.svg` — site and social graphics
+- `assets/` — product screenshots, favicon and social card
 
 ## Publish on GitHub Pages
 

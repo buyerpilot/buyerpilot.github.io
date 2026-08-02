@@ -29,7 +29,11 @@
       link.href = '#pricing';
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        showToast(`${plan.charAt(0).toUpperCase() + plan.slice(1)} checkout is not configured yet. Add the URL in config.js before publishing.`);
+        if (plan === 'trial') {
+          showToast('The no-card 7-day trial needs the Sourcepilot trial backend before it can activate. Starter, Pro and Lifetime checkout links are live below.');
+        } else {
+          showToast(`${plan.charAt(0).toUpperCase() + plan.slice(1)} checkout is not configured yet.`);
+        }
         document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' });
       });
     }
