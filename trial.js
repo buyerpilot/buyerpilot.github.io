@@ -12,31 +12,60 @@
     status.className = `inline-status ${type}`.trim();
   }
 
+  async function readResponse(response) {
+    const text = await response.text();
+    if (!text) return {};
+    try {
+      return JSON.parse(text);
+    } catch {
+      throw new Error('The trial server returned an invalid response. Please try again.');
+    }
+  }
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.whatsappConsent.checked) {
       setStatus('Please accept the WhatsApp communication consent to start the trial.', 'error');
       return;
     }
+
+    const apiBaseUrl = String(config.apiBaseUrl || '').replace(/\/$/, '');
+    if (!apiBaseUrl) {
+      setStatus('The Sourcepilot trial service is not configured.', 'error');
+      return;
+    }
+
     submit.disabled = true;
     setStatus('Starting your trial…');
+
     try {
-      const response = await fetch(`${config.apiBaseUrl.replace(/\/$/, '')}/trial/start`, {
+      /*
+       * A string request body uses the CORS-safelisted text/plain content type.
+       * This avoids an unnecessary browser preflight while the Worker still
+       * parses the JSON text normally.
+       */
+      const response = await fetch(`${apiBaseUrl}/trial/start`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        mode: 'cors',
+        cache: 'no-store',
         body: JSON.stringify({
           email: form.email.value.trim(),
           phone_number: form.phone.value.trim(),
           whatsapp_consent: form.whatsappConsent.checked
         })
       });
-      const data = await response.json();
+
+      const data = await readResponse(response);
       if (!response.ok) throw new Error(data.error || 'Could not start trial.');
+
       keyNode.textContent = data.license_key;
       result.classList.remove('hidden');
       setStatus(`Trial active until ${new Date(data.expires_at).toLocaleString()}.`, 'success');
     } catch (error) {
-      setStatus(error.message, 'error');
+      const message = error instanceof TypeError && /fetch/i.test(error.message)
+        ? 'Could not reach the Sourcepilot trial server. Refresh this page and try again.'
+        : error.message;
+      setStatus(message || 'Could not start trial.', 'error');
     } finally {
       submit.disabled = false;
     }
