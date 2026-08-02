@@ -1,0 +1,34 @@
+(() => {
+  const config = window.SOURCEPILOT_CONFIG || {};
+  const form = document.querySelector('[data-portal-form]');
+  const status = document.querySelector('[data-status]');
+  const submit = document.querySelector('[data-submit]');
+
+  function setStatus(message, type = '') {
+    status.textContent = message;
+    status.className = `inline-status ${type}`.trim();
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!config.apiBaseUrl || config.apiBaseUrl.includes('YOUR_SUBDOMAIN')) {
+      setStatus('The Sourcepilot billing backend has not been deployed yet.', 'error');
+      return;
+    }
+    submit.disabled = true;
+    setStatus('Opening the secure Dodo customer portal…');
+    try {
+      const response = await fetch(`${config.apiBaseUrl.replace(/\/$/, '')}/portal/session`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ license_key: form.license_key.value.trim() })
+      });
+      const data = await response.json();
+      if (!response.ok || !data.link) throw new Error(data.error || 'Could not create portal session.');
+      location.href = data.link;
+    } catch (error) {
+      setStatus(error.message, 'error');
+      submit.disabled = false;
+    }
+  });
+})();

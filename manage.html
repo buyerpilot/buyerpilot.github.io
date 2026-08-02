@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage subscription — Sourcepilot</title>
+  <meta name="theme-color" content="#060b14">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="manage.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Sourcepilot home">
+        <span class="brand-mark" aria-hidden="true"><img src="favicon.svg" width="36" height="36" alt=""></span>
+        Sourcepilot
+      </a>
+      <div class="nav-actions"><a class="button button-secondary button-small" href="index.html">Back to website</a></div>
+    </div>
+  </header>
+  <main class="account-main">
+    <div class="container">
+<section class="card account-card">
+  <span class="eyebrow">Billing and license</span>
+  <h1>Manage your Sourcepilot subscription</h1>
+  <p class="lead">Enter the paid license key issued by Dodo Payments. Sourcepilot will open a secure, time-limited Dodo customer portal session.</p>
+  <form data-portal-form>
+    <div class="form-group">
+      <label class="form-label" for="portal-key">Paid license key</label>
+      <input class="form-input" id="portal-key" name="license_key" type="text" autocomplete="off" required placeholder="Paste your Sourcepilot license key">
+    </div>
+    <button class="button button-primary" type="submit" data-submit>Open customer portal</button>
+    <p class="inline-status" data-status aria-live="polite"></p>
+  </form>
+  <ul class="muted-list">
+    <li>Cancel or review a subscription.</li>
+    <li>Update billing and payment information.</li>
+    <li>View invoices, receipts and license keys.</li>
+  </ul>
+</section>
+</div>
+  </main>
+</body>
+</html>

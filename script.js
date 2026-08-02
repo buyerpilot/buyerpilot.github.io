@@ -12,7 +12,7 @@
   }
 
   const checkoutMap = {
-    trial: config.trialCheckoutUrl,
+    trial: config.trialPageUrl || 'trial.html',
     starter: config.starterCheckoutUrl,
     pro: config.proCheckoutUrl,
     lifetime: config.lifetimeCheckoutUrl
@@ -23,17 +23,15 @@
     const url = checkoutMap[plan];
     if (url) {
       link.href = url;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
+      if (plan !== 'trial') {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
     } else {
       link.href = '#pricing';
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        if (plan === 'trial') {
-          showToast('The no-card 7-day trial needs the Sourcepilot trial backend before it can activate. Starter, Pro and Lifetime checkout links are live below.');
-        } else {
-          showToast(`${plan.charAt(0).toUpperCase() + plan.slice(1)} checkout is not configured yet.`);
-        }
+        showToast(`${plan.charAt(0).toUpperCase() + plan.slice(1)} is not configured yet.`);
         document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' });
       });
     }
@@ -48,7 +46,7 @@
       link.href = '#pricing';
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        showToast('Chrome Web Store URL is not configured yet. Add it in config.js before publishing.');
+        showToast('Chrome Web Store URL is not configured yet.');
       });
     }
   });
