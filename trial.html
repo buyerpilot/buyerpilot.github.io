@@ -26,12 +26,21 @@
   <span class="eyebrow">7-day full trial</span>
   <h1>Start your Sourcepilot trial</h1>
   <p class="lead">No payment card required. You receive all Pro features for seven days, with up to 50 ranking sessions.</p>
-  <form data-trial-form>
+  <form data-trial-form autocomplete="off">
     <div class="form-group">
       <label class="form-label" for="trial-email">Email address</label>
-      <input class="form-input" id="trial-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <input class="form-input" id="trial-email" name="email" type="email" autocomplete="off" required placeholder="you@example.com">
     </div>
-    <button class="button button-primary" type="submit" data-submit>Generate trial license</button>
+    <div class="form-group">
+      <label class="form-label" for="trial-phone">WhatsApp/mobile number</label>
+      <input class="form-input" id="trial-phone" name="phone" type="tel" inputmode="tel" autocomplete="off" required placeholder="+91 98765 43210">
+      <p class="form-help">Include your country code. This number is collected for trial support and is not OTP-verified yet.</p>
+    </div>
+    <label class="form-consent" for="trial-whatsapp-consent">
+      <input id="trial-whatsapp-consent" name="whatsappConsent" type="checkbox" required>
+      <span>I agree to receive Sourcepilot trial, support and product messages on WhatsApp. I can opt out at any time.</span>
+    </label>
+    <button class="button button-primary" type="submit" data-submit>Start free trial</button>
     <p class="inline-status" data-status aria-live="polite"></p>
   </form>
   <div class="license-box hidden" data-result>
@@ -42,6 +51,7 @@
   </div>
   <ul class="muted-list">
     <li>One trial per email address.</li>
+    <li>Your WhatsApp/mobile number is collected with consent; OTP verification is not currently enabled.</li>
     <li>The trial expires after seven days or 50 ranking sessions, whichever happens first.</li>
     <li>Trial use is subject to the Sourcepilot Terms and Privacy Policy.</li>
   </ul>

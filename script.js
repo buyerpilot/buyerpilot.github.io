@@ -37,32 +37,53 @@
     }
   });
 
-  document.querySelectorAll('[data-chrome-store]').forEach((link) => {
-    if (config.chromeWebStoreUrl) {
-      link.href = config.chromeWebStoreUrl;
+  const browserStoreUrls = {
+    chrome: config.chromeWebStoreUrl,
+    edge: config.edgeAddonsUrl,
+    firefox: config.firefoxAddonsUrl
+  };
+
+  document.querySelectorAll('[data-browser-store]').forEach((link) => {
+    const browser = link.dataset.browserStore;
+    const url = browserStoreUrls[browser];
+    const statusNode = link.querySelector('[data-store-status]');
+    if (url) {
+      link.href = url;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
+      link.classList.remove('store-link-pending');
+      if (statusNode) statusNode.textContent = 'Open store listing';
     } else {
-      link.href = '#pricing';
+      link.href = '#browser-support';
+      link.classList.add('store-link-pending');
+      if (statusNode) statusNode.textContent = 'Store link coming soon';
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        showToast('Chrome Web Store URL is not configured yet.');
+        showToast(`${browser.charAt(0).toUpperCase() + browser.slice(1)} store link will be added after publication.`);
+        document.querySelector('#browser-support')?.scrollIntoView({ behavior: 'smooth' });
       });
     }
   });
 
-  document.querySelectorAll('[data-support-email]').forEach((link) => {
-    if (config.supportEmail) {
-      link.href = `mailto:${config.supportEmail}`;
-      link.textContent = config.supportEmail;
+  document.querySelectorAll('[data-chrome-store]').forEach((link) => {
+    const url = config.chromeWebStoreUrl;
+    if (url) {
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
     } else {
-      link.href = '#';
-      link.textContent = 'Support email not configured';
+      link.href = '#browser-support';
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        showToast('Add your support email in config.js before publishing.');
+        document.querySelector('#browser-support')?.scrollIntoView({ behavior: 'smooth' });
       });
     }
+  });
+
+  const supportEmail = config.supportEmail || 'hellosourcepilot@gmail.com';
+  document.querySelectorAll('[data-support-email]').forEach((link) => {
+    link.href = `mailto:${supportEmail}`;
+    link.textContent = supportEmail;
   });
 
   const menuButton = document.querySelector('[data-menu-button]');

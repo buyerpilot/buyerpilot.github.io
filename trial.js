@@ -14,17 +14,21 @@
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!config.apiBaseUrl || config.apiBaseUrl.includes('YOUR_SUBDOMAIN')) {
-      setStatus('The Sourcepilot trial backend has not been deployed yet.', 'error');
+    if (!form.whatsappConsent.checked) {
+      setStatus('Please accept the WhatsApp communication consent to start the trial.', 'error');
       return;
     }
     submit.disabled = true;
-    setStatus('Creating your trial…');
+    setStatus('Starting your trial…');
     try {
       const response = await fetch(`${config.apiBaseUrl.replace(/\/$/, '')}/trial/start`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ email: form.email.value })
+        body: JSON.stringify({
+          email: form.email.value.trim(),
+          phone_number: form.phone.value.trim(),
+          whatsapp_consent: form.whatsappConsent.checked
+        })
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Could not start trial.');
