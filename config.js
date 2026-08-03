@@ -7,6 +7,7 @@ window.SOURCEPILOT_CONFIG = {
   telegramUrl: "https://t.me/ak121221",
   tutorialsPageUrl: "tutorials.html",
   apiBaseUrl: "https://sourcepilot-api.hellosourcepilot.workers.dev",
+  turnstileSiteKey: "0x4AAAAAAEFeI4ML_l_2SB6l",
 
   // Add the exact extension-store listing URLs after each listing is published.
   chromeWebStoreUrl: "",

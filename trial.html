@@ -8,7 +8,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=6.0">
   <script src="config.js?v=6.0" defer></script>
-  <script src="trial.js?v=5.1" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="trial.js?v=6.1" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -40,14 +41,18 @@
       <input id="trial-whatsapp-consent" name="whatsappConsent" type="checkbox" required>
       <span>I agree to receive Sourcepilot trial, support and product messages on WhatsApp. I can opt out at any time.</span>
     </label>
+    <div class="form-group">
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAEFeI4ML_l_2SB6l" data-theme="auto"></div>
+      <p class="form-help">Complete the security check before starting the trial.</p>
+    </div>
     <button class="button button-primary" type="submit" data-submit>Start free trial</button>
     <p class="inline-status" data-status aria-live="polite"></p>
   </form>
   <div class="license-box hidden" data-result>
-    <strong>Your trial license key</strong>
+    <strong>Your trial licence key</strong>
     <code class="license-key" data-license-key></code>
-    <button class="button button-secondary button-small" type="button" data-copy>Copy license key</button>
-    <p>Open the Sourcepilot extension, paste this key into <strong>Enter license key</strong>, then click <strong>Activate</strong>.</p>
+    <button class="button button-secondary button-small" type="button" data-copy>Copy licence key</button>
+    <p>Open the Sourcepilot extension, paste this key into <strong>Enter licence key</strong>, then click <strong>Activate</strong>.</p>
   </div>
   <ul class="muted-list">
     <li>One trial per email address.</li>

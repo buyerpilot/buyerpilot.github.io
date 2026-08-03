@@ -35,6 +35,12 @@
       return;
     }
 
+    const turnstileToken = form.querySelector('[name="cf-turnstile-response"]')?.value || '';
+    if (!turnstileToken) {
+      setStatus('Complete the security verification before starting the trial.', 'error');
+      return;
+    }
+
     submit.disabled = true;
     setStatus('Starting your trial…');
 
@@ -51,7 +57,8 @@
         body: JSON.stringify({
           email: form.email.value.trim(),
           phone_number: form.phone.value.trim(),
-          whatsapp_consent: form.whatsappConsent.checked
+          whatsapp_consent: form.whatsappConsent.checked,
+          turnstile_token: turnstileToken
         })
       });
 
@@ -66,6 +73,7 @@
         ? 'Could not reach the Sourcepilot trial server. Refresh this page and try again.'
         : error.message;
       setStatus(message || 'Could not start trial.', 'error');
+      if (window.turnstile) window.turnstile.reset();
     } finally {
       submit.disabled = false;
     }
