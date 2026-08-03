@@ -2,6 +2,10 @@
 window.SOURCEPILOT_CONFIG = {
   siteUrl: "https://sourcepilot-app.github.io/",
   supportEmail: "hellosourcepilot@gmail.com",
+  supportPhone: "+91 9137436317",
+  whatsappUrl: "https://wa.me/919137436317",
+  telegramUrl: "https://t.me/ak121221",
+  tutorialsPageUrl: "tutorials.html",
   apiBaseUrl: "https://sourcepilot-api.hellosourcepilot.workers.dev",
 
   // Add the exact extension-store listing URLs after each listing is published.

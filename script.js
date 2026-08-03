@@ -86,6 +86,24 @@
     link.textContent = supportEmail;
   });
 
+  const supportPhone = config.supportPhone || '+91 9137436317';
+  const whatsappUrl = config.whatsappUrl || 'https://wa.me/919137436317';
+  const telegramUrl = config.telegramUrl || 'https://t.me/ak121221';
+
+  document.querySelectorAll('[data-support-phone]').forEach((node) => {
+    node.textContent = supportPhone;
+  });
+  document.querySelectorAll('[data-whatsapp-link]').forEach((link) => {
+    link.href = whatsappUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+  document.querySelectorAll('[data-telegram-link]').forEach((link) => {
+    link.href = telegramUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
   const menuButton = document.querySelector('[data-menu-button]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   if (menuButton && mobileMenu) {

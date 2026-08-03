@@ -1,21 +1,14 @@
-# Sourcepilot website
+# Sourcepilot website — Phase 6
 
-Upload all files in this directory to the root of the GitHub Pages repository.
+Upload every file in this `website` folder to the GitHub Pages repository root.
 
-Before upload, replace `apiBaseUrl` in `config.js` with the deployed Cloudflare Worker URL.
+## Added in this phase
 
-Dodo checkout mapping is already corrected:
+- Cropped, concrete hero image showing the real 1688 page and Sourcepilot ranking panel.
+- Six captioned tutorial videos and `tutorials.html`.
+- Automatic supplier deduplication messaging across the homepage, FAQ and tutorials.
+- Free Trial and Starter clearly lock CSV export, Price Focused and Quality Focused ranking.
+- Chrome, Microsoft Edge and Firefox publication area with store URLs controlled in `config.js`.
+- Email, WhatsApp and Telegram support links.
 
-- Starter: `pdt_0NkTQ8TRw54f8tZi0Z8Sq`
-- Pro: `pdt_0NkTT6dP7jmSpOUVS5xou`
-- Founder Lifetime: `pdt_0NkTTKNzQFFZrWp9jL04a`
-
-New pages:
-
-- `trial.html` — no-card 7-day / 50-session trial signup.
-- `success.html` — displays the Dodo-generated `license_key` from the return URL.
-- `manage.html` — creates a secure Dodo customer-portal session through the backend.
-
-
-All three hosted checkout URLs include `redirect_url=https://sourcepilot-app.github.io/success.html`.
-The success page will receive `license_key` only after a License Key entitlement is attached to the corresponding Dodo product.
+After browser-store approval, paste the three public listing URLs into `config.js`. Until then the website displays “Store link coming soon”.
