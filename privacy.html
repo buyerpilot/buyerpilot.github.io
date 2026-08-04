@@ -28,6 +28,12 @@
   <h2>Security verification</h2>
   <p>The free-trial form uses Cloudflare Turnstile to reduce automated abuse. Cloudflare processes technical request and verification data for this security check under its own privacy terms.</p>
 </section>
+
+<section class="legal-section">
+  <h2>Security and retention</h2>
+  <p>Sourcepilot stores licence and usage identifiers as hashes where practical. New trial contact details are encrypted before database storage, while the encryption key remains in a private Cloudflare Worker secret. Device activations use short-lived tokens and a browser-generated signing key. Temporary ranking exports expire automatically. Encrypted trial contact fields are purged after the trial has been expired for 90 days. Security records may retain hashed network and activation identifiers for up to 90 days to investigate abuse without recording full licence keys.</p>
+</section>
+
 </main>
   <footer class="site-footer"><div class="container footer-bottom"><span>© <span data-current-year></span> Sourcepilot.</span><span><a href="terms.html">Terms</a> · <a href="refund.html">Refunds</a> · <a href="index.html">Home</a></span></div></footer>
   <div class="toast" role="status" aria-live="polite" data-toast></div>
