@@ -85,13 +85,15 @@ p { color: var(--muted); }
   background: rgba(6, 11, 20, .76);
   backdrop-filter: blur(18px);
 }
-.nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.brand { display: inline-flex; align-items: center; gap: 11px; font-size: 1.06rem; font-weight: 800; letter-spacing: -.02em; }
+.nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 11px; font-size: 1.06rem; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
 .brand-mark { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; border: 1px solid rgba(96,165,250,.25); background: #0b1629; box-shadow: inset 0 0 24px rgba(59,130,246,.10); }
 .brand-mark img { display:block; width:100%; height:100%; border-radius:11px; }
-.desktop-nav { display: flex; align-items: center; gap: 28px; color: #cbd5e1; font-size: .9rem; font-weight: 650; }
+.desktop-nav { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: clamp(12px, 1.1vw, 22px); color: #cbd5e1; font-size: .88rem; font-weight: 650; }
+.desktop-nav a { display: inline-flex; align-items: center; min-height: 42px; white-space: nowrap; line-height: 1; text-align: center; }
 .desktop-nav a:hover { color: #fff; }
-.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-actions { flex: 0 0 auto; display: flex; align-items: center; gap: 12px; }
+.nav-actions .button { white-space: nowrap; }
 .menu-button { display: none; width: 42px; height: 42px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); cursor: pointer; }
 .menu-button span { display: block; width: 18px; height: 2px; margin: 4px auto; border-radius: 999px; background: #e2e8f0; }
 .mobile-menu { display: none; padding: 8px 20px 24px; border-top: 1px solid var(--border); background: #07101d; }
@@ -351,7 +353,7 @@ details p { padding: 0 22px 22px; margin-bottom: 0; }
 }
 
 /* Phase 6: concrete hero, tutorials, plan locks and support channels */
-.desktop-nav { gap: 20px; }
+.desktop-nav { gap: clamp(12px, 1.1vw, 20px); }
 .hero-grid { grid-template-columns: .82fr 1.18fr; align-items: center; }
 .hero-card { margin: 10px 0 0; }
 .hero-card::before { inset: -12px; opacity: .78; }
