@@ -1,0 +1,21 @@
+# Sourcepilot
+
+Sourcepilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688.
+
+Canonical website: https://sourcepilot-app.github.io/
+Tutorials: https://sourcepilot-app.github.io/tutorials.html
+Alibaba guide: https://sourcepilot-app.github.io/alibaba-supplier-ranking.html
+1688 guide: https://sourcepilot-app.github.io/1688-supplier-ranking.html
+Deduplication guide: https://sourcepilot-app.github.io/supplier-deduplication.html
+Pricing: https://sourcepilot-app.github.io/#pricing
+Privacy: https://sourcepilot-app.github.io/privacy.html
+
+Core capabilities:
+- Quantity-aware price comparison
+- Marketplace-specific Alibaba and 1688 processing
+- Automatic supplier deduplication
+- Standard, Price Focused and Quality Focused ranking profiles
+- Server-generated CSV export on eligible plans
+- Chrome, Microsoft Edge and Mozilla Firefox support
+
+Sourcepilot is independent and is not affiliated with Alibaba.com or 1688.com.
