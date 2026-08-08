@@ -9,6 +9,10 @@ window.SOURCEPILOT_CONFIG = {
   apiBaseUrl: "https://sourcepilot-api.hellosourcepilot.workers.dev",
   turnstileSiteKey: "0x4AAAAAAEFeI4ML_l_2SB6l",
 
+  // Optional: paste your GA4 Measurement ID (for example G-ABC123XYZ) here.
+  // Leave blank until your GA4 web data stream is created.
+  ga4MeasurementId: "",
+
   // Add the exact extension-store listing URLs after each listing is published.
   chromeWebStoreUrl: "https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak",
   edgeAddonsUrl: "https://microsoftedge.microsoft.com/addons/detail/sourcepilot/dhembhggjgankceogaimilnhpibbkhbh",

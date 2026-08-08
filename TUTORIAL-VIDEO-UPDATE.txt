@@ -1,0 +1,1 @@
+All six short slideshow tutorial videos were replaced with narrated guided walkthroughs. Video structured-data durations were updated.

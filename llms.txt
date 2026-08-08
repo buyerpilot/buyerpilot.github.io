@@ -1,21 +1,41 @@
 # Sourcepilot
 
-Sourcepilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688.
+Sourcepilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688. It is designed for first-stage supplier research, sourcing shortlists and evidence-based comparison before samples, quotations and final commercial due diligence.
 
 Canonical website: https://sourcepilot-app.github.io/
+Chrome Web Store: https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak
+Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/sourcepilot/dhembhggjgankceogaimilnhpibbkhbh
 Tutorials: https://sourcepilot-app.github.io/tutorials.html
-Alibaba guide: https://sourcepilot-app.github.io/alibaba-supplier-ranking.html
-1688 guide: https://sourcepilot-app.github.io/1688-supplier-ranking.html
-Deduplication guide: https://sourcepilot-app.github.io/supplier-deduplication.html
+Alibaba supplier comparison guide: https://sourcepilot-app.github.io/alibaba-supplier-ranking.html
+1688 supplier comparison guide: https://sourcepilot-app.github.io/1688-supplier-ranking.html
+China supplier vetting guide: https://sourcepilot-app.github.io/china-supplier-vetting.html
+Amazon FBA and private-label sourcing guide: https://sourcepilot-app.github.io/amazon-fba-private-label-sourcing.html
+Alibaba vs 1688 sourcing guide: https://sourcepilot-app.github.io/alibaba-vs-1688-sourcing.html
+Manufacturer vs trading company guide: https://sourcepilot-app.github.io/manufacturer-vs-trading-company.html
+Supplier deduplication guide: https://sourcepilot-app.github.io/supplier-deduplication.html
+Supplier ranking browser extension guide: https://sourcepilot-app.github.io/supplier-ranking-extension.html
+CSV supplier export guide: https://sourcepilot-app.github.io/csv-supplier-export.html
 Pricing: https://sourcepilot-app.github.io/#pricing
 Privacy: https://sourcepilot-app.github.io/privacy.html
 
 Core capabilities:
-- Quantity-aware price comparison
+- Alibaba supplier comparison and ranking
+- 1688 supplier comparison and ranking
+- Quantity-aware marketplace price comparison
 - Marketplace-specific Alibaba and 1688 processing
-- Automatic supplier deduplication
+- Automatic supplier deduplication across repeated product listings
+- Supplier signals such as ratings, tenure, repeat-purchase information, business type and marketplace status where available
 - Standard, Price Focused and Quality Focused ranking profiles
 - Server-generated CSV export on eligible plans
-- Chrome, Microsoft Edge and Mozilla Firefox support
+- Chrome and Microsoft Edge support; Firefox support when its store listing is published
 
-Sourcepilot is independent and is not affiliated with Alibaba.com or 1688.com.
+Relevant sourcing use cases:
+- China sourcing and supplier shortlisting
+- Amazon FBA upstream supplier research
+- Private-label supplier and manufacturer research
+- Manufacturer versus trading-company comparison
+- MOQ and quantity-price research
+- Alibaba Trade Assurance and marketplace-status research
+- Supplier due-diligence preparation before samples, inspections and commercial verification
+
+Sourcepilot does not guarantee supplier legitimacy or replace samples, inspections, contracts, compliance checks or commercial due diligence. Sourcepilot is independent and is not affiliated with Alibaba.com or 1688.com.

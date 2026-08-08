@@ -23,3 +23,12 @@
 
 ## Video limitation
 The existing MP4 files are short animated visual explainers. They were not falsely represented as human screen recordings. The included recording guide and scripts define the real recordings needed to replace them.
+
+## SEO v9 — August 8, 2026
+- Expanded the homepage title, H1, descriptions and visible sourcing-use-case copy around Alibaba supplier comparison, 1688 sourcing, China supplier shortlisting, Amazon FBA/private-label sourcing and manufacturer selection.
+- Added four unique guides: China supplier vetting, Amazon FBA/private-label sourcing, Alibaba vs 1688 sourcing, and manufacturer vs trading company.
+- Added internal links and sitemap entries for the new guides.
+- Added the public Chrome Web Store URL to product structured data and llms.txt.
+- Added optional GA4 loading via `config.js`, plus store/CTA/support/video engagement events.
+- Did not add hidden keyword blocks or meta-keywords stuffing. Search terms are used naturally in visible, useful content.
+
