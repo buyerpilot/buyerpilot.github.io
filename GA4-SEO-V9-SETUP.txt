@@ -18,9 +18,9 @@ ENABLE GOOGLE ANALYTICS 4
 3. Copy the Measurement ID. It starts with G-.
 4. Open config.js in this package.
 5. Change:
-     ga4MeasurementId: "G-NBWJHCF9Y6",
+     ga4MeasurementId: "G-2LL821WS7J",
    to something like:
-     ga4MeasurementId: "G-NBWJHCF9Y6",
+     ga4MeasurementId: "G-2LL821WS7J",
 6. Commit/upload the updated config.js. No other page needs editing.
 7. Visit the website yourself, then check GA4 Realtime. Initial data may take a little time to appear.
 

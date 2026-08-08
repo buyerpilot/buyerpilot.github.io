@@ -11,7 +11,7 @@ window.SOURCEPILOT_CONFIG = {
 
   // Optional: paste your GA4 Measurement ID (for example G-ABC123XYZ) here.
   // Leave blank until your GA4 web data stream is created.
-  ga4MeasurementId: "G-NBWJHCF9Y6",
+  ga4MeasurementId: "G-2LL821WS7J",
 
   // Add the exact extension-store listing URLs after each listing is published.
   chromeWebStoreUrl: "https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak",
