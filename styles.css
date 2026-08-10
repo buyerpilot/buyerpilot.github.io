@@ -685,3 +685,56 @@ details p { padding: 0 22px 22px; margin-bottom: 0; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
   .price-card, .feature-card, .platform-card, .score-summary { padding: 20px 18px; }
 }
+
+
+/* BuyerPilot v11 — compact header + above-the-fold hero */
+@media (min-width: 1021px) {
+  .site-header { background: rgba(4, 10, 20, .94); }
+  .nav-wrap { min-height: 76px; gap: 24px; }
+  .brand-primary { gap: 12px; font-size: 1.36rem; font-weight: 900; letter-spacing: -.035em; color: #fff; }
+  .brand-primary .brand-mark { width: 44px; height: 44px; border-radius: 13px; border-color: rgba(96,165,250,.38); box-shadow: 0 0 0 1px rgba(96,165,250,.08), 0 8px 30px rgba(37,99,235,.16), inset 0 0 22px rgba(59,130,246,.1); }
+  .brand-name { background: linear-gradient(105deg,#fff 15%,#dbeafe 62%,#a5b4fc); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+  .compact-nav { justify-content: flex-end; gap: 8px; font-size: .84rem; }
+  .compact-nav > a, .nav-dropdown-trigger { min-height: 40px; padding: 0 11px; border-radius: 10px; color: #cbd5e1; }
+  .compact-nav > a:hover, .nav-dropdown-trigger:hover, .nav-dropdown:focus-within .nav-dropdown-trigger { color:#fff; background:rgba(148,163,184,.08); }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-trigger { display:flex; align-items:center; gap:6px; border:0; background:transparent; cursor:pointer; font-size:inherit; font-weight:700; white-space:nowrap; }
+  .nav-dropdown-trigger span { color:#60a5fa; font-size:.72rem; transition:transform .16s ease; }
+  .nav-dropdown:hover .nav-dropdown-trigger span, .nav-dropdown:focus-within .nav-dropdown-trigger span { transform:rotate(180deg); }
+  .nav-dropdown-menu { position:absolute; top:calc(100% + 8px); left:50%; z-index:50; width:310px; padding:8px; border:1px solid rgba(148,163,184,.18); border-radius:16px; background:rgba(7,15,28,.98); box-shadow:0 22px 60px rgba(0,0,0,.42); opacity:0; visibility:hidden; transform:translate(-50%,-6px); transition:opacity .15s ease, transform .15s ease, visibility .15s ease; }
+  .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { opacity:1; visibility:visible; transform:translate(-50%,0); }
+  .nav-dropdown-menu a { display:grid; gap:2px; min-height:auto; padding:11px 12px; border-radius:11px; text-align:left; }
+  .nav-dropdown-menu a:hover { background:rgba(59,130,246,.1); }
+  .nav-dropdown-menu strong { color:#f8fafc; font-size:.88rem; }
+  .nav-dropdown-menu span { color:#8492a8; font-size:.73rem; font-weight:500; line-height:1.35; }
+  .nav-actions { flex:0 0 auto; }
+  .nav-actions .button-primary { padding-inline:18px; }
+
+  .hero { padding: 30px 0 38px; }
+  .hero-grid { grid-template-columns: .88fr 1.12fr; gap: 40px; align-items: center; }
+  .hero-copy h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(3rem, 4.25vw, 4.35rem); line-height: .98; }
+  .hero-copy > p { max-width: 650px; margin-bottom: 22px; font-size: clamp(.94rem, 1.15vw, 1.05rem); line-height:1.65; }
+  .hero-badge { margin-bottom: 17px; padding:6px 11px; font-size:.7rem; }
+  .hero-actions { gap:11px; margin-bottom:19px; }
+  .hero-actions .button { min-height:44px; padding:10px 17px; font-size:.88rem; }
+  .hero-points { gap:8px 16px; font-size:.77rem; }
+  .hero-card { margin:0; max-width:760px; justify-self:end; }
+  .hero-card::before { inset:-9px; filter:blur(22px); }
+  .hero-showcase-image { border-radius:18px; }
+  .hero-proof-row { margin-top:10px; padding:11px 14px; }
+  .hero-proof-row b { font-size:1rem; }
+  .hero-image-caption { margin-top:8px; font-size:.7rem; }
+}
+
+@media (max-width: 1020px) {
+  .brand-primary .brand-name { font-size:1.08rem; font-weight:900; }
+}
+
+
+/* Keep the BuyerPilot identity visually stronger than navigation on all headers. */
+.site-header .brand { color:#fff; font-weight:900; letter-spacing:-.035em; }
+@media (min-width: 1021px) {
+  .site-header .brand { font-size:1.34rem; }
+  .site-header .brand-mark { width:44px; height:44px; border-radius:13px; }
+}

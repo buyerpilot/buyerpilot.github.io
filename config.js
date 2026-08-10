@@ -14,7 +14,7 @@ window.SOURCEPILOT_CONFIG = {
   // Add the exact extension-store listing URLs after each listing is published.
   chromeWebStoreUrl: "https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak",
   edgeAddonsUrl: "https://microsoftedge.microsoft.com/addons/detail/sourcepilot/dhembhggjgankceogaimilnhpibbkhbh",
-  firefoxAddonsUrl: "",
+  firefoxAddonsUrl: "https://addons.mozilla.org/en-US/firefox/addon/buyerpilot/",
 
   trialPageUrl: "trial.html",
 
