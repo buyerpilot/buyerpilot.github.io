@@ -1,6 +1,6 @@
 {
-  "name": "Sourcepilot",
-  "short_name": "Sourcepilot",
+  "name": "BuyerPilot",
+  "short_name": "BuyerPilot",
   "description": "Compare, deduplicate and rank Alibaba and 1688 suppliers by price, ratings, tenure and marketplace signals. Browser extension for Chrome, Edge and Firefox.",
   "start_url": "/",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "theme_color": "#060b14",
   "icons": [
     {
-      "src": "sourcepilot-icon-512.png",
+      "src": "buyerpilot-icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

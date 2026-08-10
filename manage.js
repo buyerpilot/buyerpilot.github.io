@@ -12,7 +12,7 @@
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!config.apiBaseUrl || config.apiBaseUrl.includes('YOUR_SUBDOMAIN')) {
-      setStatus('The Sourcepilot billing backend has not been deployed yet.', 'error');
+      setStatus('The BuyerPilot billing backend has not been deployed yet.', 'error');
       return;
     }
     submit.disabled = true;

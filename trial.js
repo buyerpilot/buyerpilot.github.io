@@ -31,7 +31,7 @@
 
     const apiBaseUrl = String(config.apiBaseUrl || '').replace(/\/$/, '');
     if (!apiBaseUrl) {
-      setStatus('The Sourcepilot trial service is not configured.', 'error');
+      setStatus('The BuyerPilot trial service is not configured.', 'error');
       return;
     }
 
@@ -70,7 +70,7 @@
       setStatus(`Trial active until ${new Date(data.expires_at).toLocaleString()}.`, 'success');
     } catch (error) {
       const message = error instanceof TypeError && /fetch/i.test(error.message)
-        ? 'Could not reach the Sourcepilot trial server. Refresh this page and try again.'
+        ? 'Could not reach the BuyerPilot trial server. Refresh this page and try again.'
         : error.message;
       setStatus(message || 'Could not start trial.', 'error');
       if (window.turnstile) window.turnstile.reset();

@@ -1,4 +1,4 @@
-# Sourcepilot SEO v7 changelog
+# BuyerPilot SEO v7 changelog
 
 ## Technical SEO
 - Added unique page titles, meta descriptions, canonical URLs, robots directives, Open Graph tags and Twitter card tags.

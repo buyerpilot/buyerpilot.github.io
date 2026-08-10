@@ -7,8 +7,8 @@
   <circle cx="1050" cy="80" r="260" fill="#2563eb" opacity=".13"/>
   <circle cx="150" cy="600" r="260" fill="#7c3aed" opacity=".10"/>
   <rect x="80" y="90" width="72" height="72" rx="18" fill="#0f1d35" stroke="#334155"/>
-  <text x="94" y="143" fill="url(#accent)" font-family="Arial, sans-serif" font-size="39" font-weight="900" letter-spacing="-4">SP</text><circle cx="139" cy="144" r="6" fill="#22c55e"/>
-  <text x="175" y="142" fill="#f8fafc" font-family="Arial, sans-serif" font-size="44" font-weight="700">Sourcepilot</text>
+  <text x="93" y="143" fill="url(#accent)" font-family="Arial, sans-serif" font-size="37" font-weight="900" letter-spacing="-3">BP</text><circle cx="139" cy="144" r="6" fill="#22c55e"/>
+  <text x="175" y="142" fill="#f8fafc" font-family="Arial, sans-serif" font-size="44" font-weight="700">BuyerPilot</text>
   <text x="80" y="260" fill="#f8fafc" font-family="Arial, sans-serif" font-size="72" font-weight="800">Rank suppliers.</text>
   <text x="80" y="345" fill="url(#accent)" font-family="Arial, sans-serif" font-size="72" font-weight="800">Source with evidence.</text>
   <text x="80" y="430" fill="#94a3b8" font-family="Arial, sans-serif" font-size="34">Alibaba + 1688 supplier intelligence in your browser</text>

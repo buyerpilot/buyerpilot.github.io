@@ -1,4 +1,4 @@
-/* Sourcepilot GA4 analytics loader.
+/* BuyerPilot GA4 analytics loader.
    Tracking stays disabled until ga4MeasurementId is set in config.js. */
 (() => {
   const cfg = window.SOURCEPILOT_CONFIG || {};

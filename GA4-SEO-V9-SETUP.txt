@@ -40,4 +40,4 @@ AFTER UPLOAD
 2. Confirm the homepage and the new guide pages load.
 3. In Google Search Console, submit sitemap.xml and request reindexing for the homepage plus the new guide pages.
 4. Verify the website in Search Console and set it as the Chrome Web Store Official URL if available.
-5. If you enable GA4, review your privacy/consent setup for the countries where you market Sourcepilot.
+5. If you enable GA4, review your privacy/consent setup for the countries where you market BuyerPilot.

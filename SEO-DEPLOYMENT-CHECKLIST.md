@@ -1,4 +1,4 @@
-# Sourcepilot SEO deployment checklist
+# BuyerPilot SEO deployment checklist
 
 1. Upload every file in this folder to the root of the `sourcepilot-app.github.io` repository.
 2. Confirm `sitemap.xml`, `video-sitemap.xml`, `robots.txt`, `og-card.png` and the five new guide pages are publicly accessible.

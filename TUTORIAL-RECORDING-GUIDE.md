@@ -1,8 +1,8 @@
-# Sourcepilot real tutorial recording guide
+# BuyerPilot real tutorial recording guide
 
 The existing short animated videos are visual explainers. A genuine human-style tutorial should use a real browser recording from an authenticated Alibaba/1688 session. Record the raw clips below at 1920×1080, 100% browser zoom, with notifications closed and no personal information visible.
 
-## Video 1 — Complete Sourcepilot workflow (3–4 minutes)
+## Video 1 — Complete BuyerPilot workflow (3–4 minutes)
 1. Open the extension popup and show an active licence.
 2. Open a supported 1688 or Alibaba results page.
 3. Select and deselect product cards.

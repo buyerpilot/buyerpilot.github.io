@@ -1,4 +1,4 @@
-/* Sourcepilot website configuration */
+/* BuyerPilot website configuration */
 window.SOURCEPILOT_CONFIG = {
   siteUrl: "https://sourcepilot-app.github.io/",
   supportEmail: "hellosourcepilot@gmail.com",

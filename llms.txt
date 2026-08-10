@@ -1,6 +1,6 @@
-# Sourcepilot
+# BuyerPilot
 
-Sourcepilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688. It is designed for first-stage supplier research, sourcing shortlists and evidence-based comparison before samples, quotations and final commercial due diligence.
+BuyerPilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688. It is designed for first-stage supplier research, sourcing shortlists and evidence-based comparison before samples, quotations and final commercial due diligence.
 
 Canonical website: https://sourcepilot-app.github.io/
 Chrome Web Store: https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak
@@ -38,4 +38,4 @@ Relevant sourcing use cases:
 - Alibaba Trade Assurance and marketplace-status research
 - Supplier due-diligence preparation before samples, inspections and commercial verification
 
-Sourcepilot does not guarantee supplier legitimacy or replace samples, inspections, contracts, compliance checks or commercial due diligence. Sourcepilot is independent and is not affiliated with Alibaba.com or 1688.com.
+BuyerPilot does not guarantee supplier legitimacy or replace samples, inspections, contracts, compliance checks or commercial due diligence. BuyerPilot is independent and is not affiliated with Alibaba.com or 1688.com.
