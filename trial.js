@@ -25,7 +25,7 @@
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.whatsappConsent.checked) {
-      setStatus('Please accept the WhatsApp communication consent to start the trial.', 'error');
+      setStatus('Please accept the communication consent to start the trial.', 'error');
       return;
     }
 

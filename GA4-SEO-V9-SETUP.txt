@@ -14,7 +14,7 @@ Do not add white-on-white text, zero-opacity text, off-screen keyword blocks or 
 
 ENABLE GOOGLE ANALYTICS 4
 1. Open Google Analytics and create/select a GA4 property.
-2. Admin -> Data streams -> Web -> create a stream for https://sourcepilot-app.github.io/
+2. Admin -> Data streams -> Web -> create a stream for https://buyerpilot.github.io/
 3. Copy the Measurement ID. It starts with G-.
 4. Open config.js in this package.
 5. Change:

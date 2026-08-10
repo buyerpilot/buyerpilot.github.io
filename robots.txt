@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sourcepilot-app.github.io/sitemap.xml
-Sitemap: https://sourcepilot-app.github.io/video-sitemap.xml
+Sitemap: https://buyerpilot.github.io/sitemap.xml
+Sitemap: https://buyerpilot.github.io/video-sitemap.xml

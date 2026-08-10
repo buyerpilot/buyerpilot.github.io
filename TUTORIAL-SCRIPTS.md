@@ -68,7 +68,7 @@ Use filters and notes to create a permanent sourcing record or share the shortli
 
 ## Video 6 — Trial and licence activation (60–90 seconds)
 
-“Open the BuyerPilot extension popup. To begin the free trial, select Start secure free trial. The official BuyerPilot trial page opens in a new tab. Enter your email and mobile or WhatsApp number, complete Cloudflare verification and submit the form.
+“Open the BuyerPilot extension popup. To begin the free trial, select Start secure free trial. The official BuyerPilot trial page opens in a new tab. Enter your email and mobile number, complete Cloudflare verification and submit the form.
 
 BuyerPilot emails the trial licence key to you. Copy the key, return to the extension popup, paste it once and select Activate licence. After secure activation, the complete key is not stored inside the extension. BuyerPilot uses device-bound authentication tokens instead.
 

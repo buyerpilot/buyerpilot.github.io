@@ -80,24 +80,11 @@
     }
   });
 
-  const supportEmail = config.supportEmail || 'hellosourcepilot@gmail.com';
+  const supportEmail = config.supportEmail || 'hellobuyerpilot@gmail.com';
   document.querySelectorAll('[data-support-email]').forEach((link) => {
     link.href = `mailto:${supportEmail}`;
     link.textContent = supportEmail;
-  });
-
-  const supportPhone = config.supportPhone || '+91 9137436317';
-  const whatsappUrl = config.whatsappUrl || 'https://wa.me/919137436317';
-  const telegramUrl = config.telegramUrl || 'https://t.me/ak121221';
-
-  document.querySelectorAll('[data-support-phone]').forEach((node) => {
-    node.textContent = supportPhone;
-  });
-  document.querySelectorAll('[data-whatsapp-link]').forEach((link) => {
-    link.href = whatsappUrl;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  });
+  });  const telegramUrl = config.telegramUrl || 'https://t.me/buyerpilot';
   document.querySelectorAll('[data-telegram-link]').forEach((link) => {
     link.href = telegramUrl;
     link.target = '_blank';

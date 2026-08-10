@@ -49,7 +49,7 @@
 
     if (/^mailto:/i.test(href) || /wa\.me|t\.me/i.test(href)) {
       send("support_contact_click", {
-        channel: /^mailto:/i.test(href) ? "email" : /wa\.me/i.test(href) ? "whatsapp" : "telegram"
+        channel: /^mailto:/i.test(href) ? "email" : "telegram"
       });
     }
   });

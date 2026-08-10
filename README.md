@@ -9,6 +9,6 @@ Upload every file in this `website` folder to the GitHub Pages repository root.
 - Automatic supplier deduplication messaging across the homepage, FAQ and tutorials.
 - Free Trial and Starter clearly lock CSV export, Price Focused and Quality Focused ranking.
 - Chrome, Microsoft Edge and Firefox publication area with store URLs controlled in `config.js`.
-- Email, WhatsApp and Telegram support links.
+- Email and Telegram support links.
 
 After browser-store approval, paste the three public listing URLs into `config.js`. Until then the website displays “Store link coming soon”.
