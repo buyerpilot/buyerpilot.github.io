@@ -12,8 +12,8 @@ window.SOURCEPILOT_CONFIG = {
   ga4MeasurementId: "G-2LL821WS7J",
 
   // Add the exact extension-store listing URLs after each listing is published.
-  chromeWebStoreUrl: "https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak",
-  edgeAddonsUrl: "https://microsoftedge.microsoft.com/addons/detail/sourcepilot/dhembhggjgankceogaimilnhpibbkhbh",
+  chromeWebStoreUrl: "https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak",
+  edgeAddonsUrl: "https://microsoftedge.microsoft.com/addons/detail/buyerpilot/dhembhggjgankceogaimilnhpibbkhbh",
   firefoxAddonsUrl: "https://addons.mozilla.org/en-US/firefox/addon/buyerpilot/",
 
   trialPageUrl: "trial.html",

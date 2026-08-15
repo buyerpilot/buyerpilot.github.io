@@ -3,8 +3,8 @@
 BuyerPilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688. It is designed for first-stage supplier research, sourcing shortlists and evidence-based comparison before samples, quotations and final commercial due diligence.
 
 Canonical website: https://buyerpilot.github.io/
-Chrome Web Store: https://chromewebstore.google.com/detail/sourcepilot/gigofafeclimniglcoiinejhefhkmoak
-Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/sourcepilot/dhembhggjgankceogaimilnhpibbkhbh
+Chrome Web Store: https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak
+Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/buyerpilot/dhembhggjgankceogaimilnhpibbkhbh
 Tutorials: https://buyerpilot.github.io/tutorials.html
 Alibaba supplier comparison guide: https://buyerpilot.github.io/alibaba-supplier-ranking.html
 1688 supplier comparison guide: https://buyerpilot.github.io/1688-supplier-ranking.html
