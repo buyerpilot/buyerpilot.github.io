@@ -124,3 +124,86 @@
     node.textContent = new Date().getFullYear();
   });
 })();
+
+// BuyerPilot scroll-autoplay walkthrough
+(() => {
+  const players = document.querySelectorAll('[data-buyerpilot-video-player]');
+  if (!players.length) return;
+
+  players.forEach((player) => {
+    const video = player.querySelector('.buyerpilot-autoplay-video');
+    const playButton = player.querySelector('[data-buyerpilot-video-play]');
+    if (!video || !playButton) return;
+
+    video.muted = true;
+    video.playsInline = true;
+
+    const syncPlayerState = () => {
+      player.classList.toggle('is-playing', !video.paused && !video.ended);
+      playButton.setAttribute(
+        'aria-label',
+        video.paused ? 'Play BuyerPilot walkthrough' : 'Pause BuyerPilot walkthrough'
+      );
+    };
+
+    const tryMutedAutoplay = async () => {
+      if (!video.paused || video.ended) return;
+      video.muted = true;
+      try {
+        await video.play();
+      } catch (_) {
+        // Autoplay may still be blocked by browser/user settings.
+        syncPlayerState();
+      }
+    };
+
+    playButton.addEventListener('click', async () => {
+      if (!video.paused && !video.ended) {
+        video.pause();
+        return;
+      }
+
+      // A user gesture allows us to unmute in modern browsers.
+      video.muted = false;
+      try {
+        await video.play();
+      } catch (_) {
+        // If unmuted playback is rejected, fall back to muted playback.
+        video.muted = true;
+        try { await video.play(); } catch (_) {}
+      }
+      syncPlayerState();
+    });
+
+    video.addEventListener('play', syncPlayerState);
+    video.addEventListener('pause', syncPlayerState);
+    video.addEventListener('ended', syncPlayerState);
+
+    // Clicking the native video surface also toggles play/pause and unmutes.
+    video.addEventListener('click', async () => {
+      if (video.paused || video.ended) {
+        video.muted = false;
+        try { await video.play(); } catch (_) {}
+      } else {
+        video.pause();
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.18) {
+          tryMutedAutoplay();
+        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.08) {
+          if (!video.paused) video.pause();
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '14% 0px 14% 0px',
+      threshold: [0, 0.08, 0.18, 0.35, 0.6]
+    });
+
+    observer.observe(player);
+    syncPlayerState();
+  });
+})();

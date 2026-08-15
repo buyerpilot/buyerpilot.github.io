@@ -68,10 +68,16 @@
 <p>One real-screen video showing BuyerPilot from product selection to a ranked supplier shortlist.</p>
 </div>
 <div class="card tutorial-hero-video" style="max-width:1100px;margin:0 auto;">
-<video controls="" playsinline="" poster="buyerpilot-walkthrough-poster.webp" preload="metadata">
+<div class="buyerpilot-video-player" data-buyerpilot-video-player>
+<video controls="" playsinline="" poster="buyerpilot-walkthrough-poster.webp" preload="metadata" class="buyerpilot-autoplay-video" muted>
 <source src="buyerpilot-walkthrough.mp4" type="video/mp4"/>
+
 Your browser does not support embedded video.
 </video>
+<button class="buyerpilot-video-play" type="button" aria-label="Play BuyerPilot walkthrough" data-buyerpilot-video-play>
+<span class="buyerpilot-video-play-triangle" aria-hidden="true"></span>
+</button>
+</div>
 <div class="tutorial-video-copy">
 <span class="platform-label">Complete walkthrough</span>
 <h2>From product listings to ranked suppliers</h2>
