@@ -15,7 +15,7 @@
     .controls{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:10px}
     input,button{border-radius:10px;border:1px solid #304563;padding:12px 14px;font:inherit}
     input{background:#081426;color:#fff;min-width:0}button{background:#315efb;color:white;font-weight:700;cursor:pointer}button.secondary{background:#17253c}
-    button:disabled{opacity:.55;cursor:not-allowed}.status{margin-top:12px;color:#9fb1cc}.error{color:#ff9e9e}.success{color:#83e5ad}
+    button:disabled{opacity:.55;cursor:not-allowed}.action-btn{padding:8px 10px;font-size:13px;margin-right:6px}.danger{background:#8e2e3b;border-color:#b94455}.restart{background:#315efb}.status{margin-top:12px;color:#9fb1cc}.error{color:#ff9e9e}.success{color:#83e5ad}
     .summary{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px;color:#b8c6da}
     .table-wrap{overflow:auto;border:1px solid #263a58;border-radius:12px}
     table{width:100%;border-collapse:collapse;min-width:950px;background:#0a1628}th,td{text-align:left;padding:12px;border-bottom:1px solid #20314b;white-space:nowrap}th{background:#11213a;position:sticky;top:0}
@@ -32,7 +32,7 @@
 
   <div class="card">
     <div class="controls">
-      <input id="adminKey" type="password" autocomplete="off" placeholder="3ztGTON3IezEEHevqbscQ61tGmCZrp8K7dgIl6YMU2qE-Pjq">
+      <input id="adminKey" type="password" autocomplete="off" placeholder="Enter TRIAL_ADMIN_KEY">
       <button id="loadBtn" type="button">Load trial users</button>
       <button id="csvBtn" type="button" class="secondary" disabled>Download CSV</button>
     </div>
@@ -47,9 +47,9 @@
     <div class="table-wrap">
       <table>
         <thead><tr>
-          <th>Email</th><th>Mobile</th><th>Started</th><th>Expires</th><th>Status</th><th>Sessions</th><th>Consent</th><th>Key last 4</th>
+          <th>Email</th><th>Mobile</th><th>Started</th><th>Expires</th><th>Status</th><th>Sessions</th><th>Consent</th><th>Key last 4</th><th>Actions</th>
         </tr></thead>
-        <tbody id="rows"><tr><td colspan="8">Enter your admin key and click Load trial users.</td></tr></tbody>
+        <tbody id="rows"><tr><td colspan="9">Enter your admin key and click Load trial users.</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -88,7 +88,13 @@
         <td>${esc(t.sessions_used)} / ${esc(t.max_sessions)}</td>
         <td>${t.whatsapp_consent_at ? 'Yes' : 'No'}</td>
         <td>${esc(t.license_last4)}</td>
-      </tr>`).join('') : '<tr><td colspan="8">No trial users found.</td></tr>';
+        <td>
+          ${t.status === 'cancelled'
+            ? '<span style="color:#9fb1cc;margin-right:8px">Cancelled</span>'
+            : `<button class="action-btn danger" type="button" data-action="cancel" data-ref="${esc(t.admin_ref)}">Cancel trial</button>`}
+          <button class="action-btn restart" type="button" data-action="restart" data-ref="${esc(t.admin_ref)}">Restart trial</button>
+        </td>
+      </tr>`).join('') : '<tr><td colspan="9">No trial users found.</td></tr>';
     csvBtn.disabled = trials.length === 0;
   }
 
@@ -114,6 +120,57 @@
     } finally {
       loadBtn.disabled = false;
     }
+  });
+
+
+  async function performAction(action, adminRef) {
+    const adminKey = key.value.trim();
+    if (!adminKey) {
+      status.textContent = 'Enter your admin key.';
+      status.className = 'status error';
+      return;
+    }
+
+    const trial = trials.find(t => t.admin_ref === adminRef);
+    const label = trial?.email || 'this trial';
+
+    const confirmed = action === 'cancel'
+      ? confirm(`Cancel the trial for ${label}?\n\nThis will stop the current trial and allow this email to start a new free trial immediately.`)
+      : confirm(`Restart the trial for ${label}?\n\nThis will reset it to a fresh 7 days and 50 sessions. The same licence key will remain in use.`);
+
+    if (!confirmed) return;
+
+    status.textContent = action === 'cancel' ? 'Cancelling trial…' : 'Restarting trial…';
+    status.className = 'status';
+
+    try {
+      const response = await fetch(`${apiBase}/admin/trials/action`, {
+        method: 'POST',
+        cache: 'no-store',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${adminKey}`
+        },
+        body: JSON.stringify({ admin_ref: adminRef, action })
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'The trial action failed.');
+
+      status.textContent = data.message || 'Trial updated.';
+      status.className = 'status success';
+
+      // Reload immediately so the table always reflects the database.
+      loadBtn.click();
+    } catch (error) {
+      status.textContent = error.message || 'The trial action failed.';
+      status.className = 'status error';
+    }
+  }
+
+  rows.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-action][data-ref]');
+    if (!button) return;
+    performAction(button.dataset.action, button.dataset.ref);
   });
 
   csvBtn.addEventListener('click', () => {
