@@ -1,0 +1,43 @@
+SOURCEPILOT SEO v9 + GA4 SETUP
+================================
+
+WHAT CHANGED
+- Expanded visible, people-first SEO coverage for Alibaba supplier comparison, 1688 sourcing, China supplier vetting, Amazon FBA/private-label sourcing, manufacturer-vs-trading-company research, quantity-aware price comparison, supplier deduplication and related high-intent searches.
+- Added four substantive guide pages and linked them from the homepage.
+- Updated page titles, descriptions, structured data, internal links, sitemap and llms.txt.
+- Added GA4-ready analytics across the site. Analytics remains OFF until you paste your own GA4 Measurement ID into config.js.
+- Added funnel events for trial/checkout clicks, extension-store clicks, support clicks and tutorial video plays.
+- Preserved the current Chrome and Microsoft Edge store URLs and the latest mobile CSS/config patch.
+
+IMPORTANT: NO HIDDEN SEO KEYWORDS
+Do not add white-on-white text, zero-opacity text, off-screen keyword blocks or other hidden keyword stuffing. Google treats hidden text used to manipulate ranking as spam, and Google does not use the old meta keywords tag for web ranking. This build uses relevant search terms in visible helpful content instead.
+
+ENABLE GOOGLE ANALYTICS 4
+1. Open Google Analytics and create/select a GA4 property.
+2. Admin -> Data streams -> Web -> create a stream for https://buyerpilot.github.io/
+3. Copy the Measurement ID. It starts with G-.
+4. Open config.js in this package.
+5. Change:
+     ga4MeasurementId: "G-2LL821WS7J",
+   to something like:
+     ga4MeasurementId: "G-2LL821WS7J",
+6. Commit/upload the updated config.js. No other page needs editing.
+7. Visit the website yourself, then check GA4 Realtime. Initial data may take a little time to appear.
+
+GA4 EVENTS INCLUDED
+- page_view (standard GA4 page measurement)
+- sourcepilot_cta_click
+- extension_store_click
+- support_contact_click
+- tutorial_video_play
+
+CHROME WEB STORE WEBSITE LINK
+- Homepage URL normally appears in the listing's Details section.
+- To get a linked official website under the listing title, verify the website in Google Search Console, then select that verified site in the Chrome Web Store's Official URL field.
+
+AFTER UPLOAD
+1. Upload every file in this package to the root of the GitHub Pages repository, replacing matching files.
+2. Confirm the homepage and the new guide pages load.
+3. In Google Search Console, submit sitemap.xml and request reindexing for the homepage plus the new guide pages.
+4. Verify the website in Search Console and set it as the Chrome Web Store Official URL if available.
+5. If you enable GA4, review your privacy/consent setup for the countries where you market BuyerPilot.

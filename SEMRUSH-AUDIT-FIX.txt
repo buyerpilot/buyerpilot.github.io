@@ -1,0 +1,20 @@
+BuyerPilot Semrush audit fix — 2026-08-16
+
+The uploaded Semrush exports contained 11 issue types. This build fixes the genuine website issues:
+
+FIXED
+- Structured-data errors on / and /index.html: removed SoftwareApplication rich-result markup that would require real rating/review data. We do not fabricate reviews.
+- Homepage internal-link consolidation: all internal home links now point to canonical / instead of /index.html.
+- Resources formatted as page links: full-size demo images now use buttons rather than crawlable page anchors.
+- Low word count on tutorials.html: added a substantive step-by-step BuyerPilot workflow guide.
+- Unminified JS/CSS warnings: added minified production assets and switched HTML pages to them.
+- Updated sitemap lastmod dates for touched indexable pages.
+
+INTENTIONAL / NOT A BUYERPILOT DEFECT
+- manage.html and trial.html are intentionally noindex utility pages. Semrush may label these as blocked; they should not rank in Google.
+- privacy.html may remain "Content not optimized". It is a legal/privacy page and should be accurate, not keyword-stuffed.
+- www.buyerpilot.github.io returns 404/TLS/SNI/HSTS warnings because GitHub user sites use buyerpilot.github.io, not a www subdomain. Do not use www.buyerpilot.github.io.
+
+After deployment, rerun Semrush using the canonical URL:
+https://buyerpilot.github.io/
+not https://buyerpilot.github.io/index.html

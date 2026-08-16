@@ -1,0 +1,12 @@
+BuyerPilot Semrush Fix — deployment
+
+1. Upload every file in this folder to the ROOT of buyerpilot/buyerpilot.github.io, replacing matching files.
+2. The *.min.js and styles.min.css files are NEW. Make sure they are uploaded.
+3. Keep the existing Worker URL and Cloudflare configuration unchanged.
+4. Wait for GitHub Pages to deploy, then hard refresh https://buyerpilot.github.io/.
+5. Rerun Semrush against https://buyerpilot.github.io/ (the canonical root), NOT /index.html.
+
+Expected remaining Semrush notices:
+- www.buyerpilot.github.io TLS/404/SNI/HSTS: irrelevant GitHub Pages alternate-host check; the correct host is buyerpilot.github.io.
+- trial.html/manage.html noindex/blocked: intentional utility pages.
+- privacy.html content optimization: legal page; do not keyword-stuff it.

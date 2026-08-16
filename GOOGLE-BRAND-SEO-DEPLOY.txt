@@ -1,0 +1,13 @@
+Google brand-search fix applied to BuyerPilot homepage.
+
+Main changes:
+- Homepage title now starts with BuyerPilot.
+- First H1 now starts with BuyerPilot.
+- Added og:site_name=BuyerPilot.
+- Added application-name identity metadata.
+- Corrected WebSite alternateName values to real site-name alternatives.
+- Added Brand structured-data entity.
+- Strengthened homepage brand links.
+- Updated homepage sitemap lastmod to 2026-08-16.
+
+Google still needs to recrawl the page after deployment.

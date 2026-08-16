@@ -120,6 +120,15 @@
     });
   });
 
+
+  document.querySelectorAll('[data-open-resource]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const resource = String(button.dataset.openResource || '').trim();
+      if (!resource) return;
+      window.open(resource, '_blank', 'noopener,noreferrer');
+    });
+  });
+
   document.querySelectorAll('[data-current-year]').forEach((node) => {
     node.textContent = new Date().getFullYear();
   });

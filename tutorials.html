@@ -9,9 +9,9 @@
 <meta content="#060b14" name="theme-color"/>
 <link href="https://buyerpilot.github.io/tutorials.html" rel="canonical"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="styles.css?v=9.0" rel="stylesheet"/>
-<script defer="" src="config.js?v=9.0"></script><script defer src="analytics.js?v=9.0"></script>
-<script defer="" src="script.js?v=9.0"></script>
+<link href="styles.min.css?v=9.0" rel="stylesheet"/>
+<script defer="" src="config.min.js?v=9.0"></script><script defer src="analytics.min.js?v=9.0"></script>
+<script defer="" src="script.min.js?v=9.0"></script>
 <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="googlebot"/><meta content="BuyerPilot Tutorials: Rank Alibaba &amp; 1688 Suppliers" property="og:title"/><meta content="Watch one complete real-screen BuyerPilot walkthrough covering product selection, supplier scanning, deduplication and ranked shortlist review on Alibaba and 1688." property="og:description"/><meta content="website" property="og:type"/><meta content="https://buyerpilot.github.io/tutorials.html" property="og:url"/><meta content="https://buyerpilot.github.io/og-card.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="BuyerPilot supplier ranking extension for Alibaba and 1688" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="BuyerPilot Tutorials: Rank Alibaba &amp; 1688 Suppliers" name="twitter:title"/><meta content="Watch one complete real-screen BuyerPilot walkthrough from product selection to ranked supplier shortlist." name="twitter:description"/><meta content="https://buyerpilot.github.io/og-card.png" name="twitter:image"/><link href="site.webmanifest" rel="manifest"/><link crossorigin="anonymous" href="https://sourcepilot-api.hellosourcepilot.workers.dev" rel="preconnect"/><script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -32,31 +32,31 @@
   }
 }
 </script>
-<script defer src="support-chat.js?v=1.0"></script>
+<script defer src="support-chat.min.js?v=1.0"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to tutorials</a>
 <header class="site-header">
 <div class="container nav-wrap">
-<a aria-label="BuyerPilot home" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"><img alt="" height="36" src="favicon.svg" width="36"/></span>BuyerPilot</a>
+<a aria-label="BuyerPilot home" class="brand" href="/"><span aria-hidden="true" class="brand-mark"><img alt="" height="36" src="favicon.svg" width="36"/></span>BuyerPilot</a>
 <nav aria-label="Primary navigation" class="desktop-nav">
-<a href="index.html#demo">Product demo</a>
+<a href="/#demo">Product demo</a>
 <a aria-current="page" href="tutorials.html">Tutorials</a>
-<a href="index.html#features">Features</a>
-<a href="index.html#pricing">Pricing</a>
-<a href="index.html#contact">Contact</a>
+<a href="/#features">Features</a>
+<a href="/#pricing">Pricing</a>
+<a href="/#contact">Contact</a>
 </nav>
 <div class="nav-actions">
-<a class="button button-secondary button-small" href="index.html#pricing">View plans</a>
+<a class="button button-secondary button-small" href="/#pricing">View plans</a>
 <a class="button button-primary button-small" data-checkout="trial" href="#">Start free trial</a>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-button" data-menu-button="" type="button"><span></span><span></span><span></span></button>
 </div>
 </div>
 <nav aria-label="Mobile navigation" class="mobile-menu" data-mobile-menu="">
-<a href="index.html">Home</a>
+<a href="/">Home</a>
 <a href="#overview">Walkthrough</a>
-<a href="index.html#pricing">Pricing</a>
-<a href="index.html#faq">FAQ</a>
+<a href="/#pricing">Pricing</a>
+<a href="/#faq">FAQ</a>
 <a href="manage.html">Manage subscription</a>
 </nav>
 </header>
@@ -87,10 +87,35 @@ Your browser does not support embedded video.
 </div>
 </div>
 </section>
+<section class="section section-soft" id="walkthrough-guide">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">BuyerPilot workflow guide</span>
+<h2>What the walkthrough shows, step by step</h2>
+<p>The video above demonstrates the same workflow a buyer uses on supported Alibaba and 1688 search pages. The goal is not to replace supplier due diligence; it is to turn a crowded set of product listings into a smaller, structured supplier shortlist that is easier to investigate.</p>
+</div>
+<div class="seo-guide-layout">
+<article class="seo-guide-main">
+<section class="seo-guide-section"><h3>1. Start with a normal Alibaba or 1688 search</h3><p>BuyerPilot works inside the marketplace research process. Search for the product you need and review the listings normally. The extension adds selection controls so you can keep only the products that are relevant to your specification, material, style or sourcing requirement. Excluding poor matches before ranking matters because a supplier comparison is only useful when the underlying products are genuinely comparable.</p></section>
+<section class="seo-guide-section"><h3>2. Select the listings you actually want to compare</h3><p>Choose the product cards that deserve further research instead of scanning every result on the page. If several selected products belong to the same seller, BuyerPilot can consolidate them into one supplier record before the final ranking. This prevents one seller with many similar listings from occupying several positions in the shortlist simply because it published more product pages.</p></section>
+<section class="seo-guide-section"><h3>3. Enter the quantity you intend to source</h3><p>Alibaba and 1688 listings can show multiple quantity-price tiers. BuyerPilot uses the quantity entered by the user to evaluate the applicable marketplace price rather than assuming the lowest headline number represents the intended order. Final quotations, packaging charges, shipping, duties and negotiated commercial terms still need to be confirmed directly with the supplier.</p></section>
+<section class="seo-guide-section"><h3>4. Scan available supplier evidence</h3><p>The extension gathers the marketplace information available for the selected products and sellers. Depending on the marketplace and page, this can include price, seller ratings, years on platform, repeat-purchase or reorder signals, business type, merchant or verification status, product activity and source links. Alibaba and 1688 expose different fields, so BuyerPilot keeps their extraction and interpretation workflows separate.</p></section>
+<section class="seo-guide-section"><h3>5. Review the ranked supplier shortlist</h3><p>BuyerPilot returns a structured ranking with the supplier evidence available during the scan. Score Confidence helps show when the ranking was built from complete versus limited data. The shortlist is a research aid, not a guarantee that a supplier is legitimate or suitable. Before ordering, buyers should still confirm samples, specifications, certifications, production capability, lead time, payment terms and other commercial requirements.</p></section>
+<section class="seo-guide-section"><h3>6. Continue the research or export on eligible plans</h3><p>From the ranked panel you can open supplier or product sources and continue your checks. Pro and Founder Lifetime plans can export the supplier comparison to CSV for use in Excel or Google Sheets. This is useful when you want a permanent sourcing record, need to compare quotations later, or want to share the shortlist with a colleague.</p></section>
+</article>
+<aside class="card seo-guide-aside">
+<h2>Use the walkthrough with a real search</h2>
+<p>Install BuyerPilot in your supported desktop browser, start a free trial, then repeat the workflow on an Alibaba or 1688 search relevant to your own sourcing requirement.</p>
+<ul><li>Chrome, Edge and Firefox</li><li>7-day free trial</li><li>Up to 50 Standard ranking sessions</li><li>No payment card required for the trial</li></ul>
+<a class="button button-primary" href="trial.html">Start 7-Day Free Trial</a>
+</aside>
+</div>
+</div>
+</section>
 <section class="section">
 <div class="container">
 <div class="text-center">
-<a class="button button-primary" href="index.html">Back to BuyerPilot home</a>
+<a class="button button-primary" href="/">Back to BuyerPilot home</a>
 </div>
 </div>
 </section>
@@ -98,8 +123,8 @@ Your browser does not support embedded video.
 <footer class="site-footer">
 <div class="container">
 <div class="footer-grid">
-<div class="footer-brand"><a class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"><img alt="" height="36" src="favicon.svg" width="36"/></span>BuyerPilot</a><p>Supplier ranking and research tools for Alibaba and 1688.</p></div>
-<div class="footer-col"><h4>Product</h4><a href="index.html#demo">Product demo</a><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="manage.html">Manage subscription</a></div>
+<div class="footer-brand"><a class="brand" href="/"><span aria-hidden="true" class="brand-mark"><img alt="" height="36" src="favicon.svg" width="36"/></span>BuyerPilot</a><p>Supplier ranking and research tools for Alibaba and 1688.</p></div>
+<div class="footer-col"><h4>Product</h4><a href="/#demo">Product demo</a><a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="manage.html">Manage subscription</a></div>
 <div class="footer-col"><h4>Support</h4><a data-support-email="" href="mailto:hellobuyerpilot@gmail.com">hellobuyerpilot@gmail.com</a><a data-telegram-link="" href="https://t.me/buyerpilot">Telegram: @buyerpilot</a></div>
 <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="refund.html">Refund Policy</a></div>
 </div>
