@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>BuyerPilot Trial Users</title>
+  <link rel="icon" href="buyerpilot-icon-512.png">
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#07101e;color:#edf3ff;font-family:Inter,Arial,sans-serif}
+    .wrap{max-width:1200px;margin:0 auto;padding:28px 18px 60px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:800}.logo{width:42px;height:42px;border:1px solid #315efb;border-radius:12px;display:grid;place-items:center;color:#8ca8ff}
+    .card{background:#0e1a2d;border:1px solid #243653;border-radius:16px;padding:20px;margin-bottom:18px}
+    .controls{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:10px}
+    input,button{border-radius:10px;border:1px solid #304563;padding:12px 14px;font:inherit}
+    input{background:#081426;color:#fff;min-width:0}button{background:#315efb;color:white;font-weight:700;cursor:pointer}button.secondary{background:#17253c}
+    button:disabled{opacity:.55;cursor:not-allowed}.status{margin-top:12px;color:#9fb1cc}.error{color:#ff9e9e}.success{color:#83e5ad}
+    .summary{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px;color:#b8c6da}
+    .table-wrap{overflow:auto;border:1px solid #263a58;border-radius:12px}
+    table{width:100%;border-collapse:collapse;min-width:950px;background:#0a1628}th,td{text-align:left;padding:12px;border-bottom:1px solid #20314b;white-space:nowrap}th{background:#11213a;position:sticky;top:0}
+    .pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#19304d}.active{background:#123d30;color:#9af0c4}
+    @media(max-width:700px){.controls{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><div class="logo">BP</div>BuyerPilot Trial Users</div>
+    <a href="index.html" style="color:#a9bbd6;text-decoration:none">Back to website</a>
+  </div>
+
+  <div class="card">
+    <div class="controls">
+      <input id="adminKey" type="password" autocomplete="off" placeholder="Enter TRIAL_ADMIN_KEY">
+      <button id="loadBtn" type="button">Load trial users</button>
+      <button id="csvBtn" type="button" class="secondary" disabled>Download CSV</button>
+    </div>
+    <div id="status" class="status">The admin key is never stored in the page or sent anywhere except your BuyerPilot Worker.</div>
+  </div>
+
+  <div class="card">
+    <div class="summary">
+      <strong id="count">0 trial users</strong>
+      <span id="activeCount">0 active</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Email</th><th>Mobile</th><th>Started</th><th>Expires</th><th>Status</th><th>Sessions</th><th>Consent</th><th>Key last 4</th>
+        </tr></thead>
+        <tbody id="rows"><tr><td colspan="8">Enter your admin key and click Load trial users.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="config.js"></script>
+<script>
+(() => {
+  const apiBase = String(window.SOURCEPILOT_CONFIG?.apiBaseUrl || 'https://sourcepilot-api.hellosourcepilot.workers.dev').replace(/\/$/, '');
+  const key = document.getElementById('adminKey');
+  const loadBtn = document.getElementById('loadBtn');
+  const csvBtn = document.getElementById('csvBtn');
+  const status = document.getElementById('status');
+  const rows = document.getElementById('rows');
+  const count = document.getElementById('count');
+  const activeCount = document.getElementById('activeCount');
+  let trials = [];
+
+  const fmt = (value) => {
+    if (!value) return '';
+    const d = new Date(value);
+    return Number.isNaN(d.getTime()) ? value : d.toLocaleString();
+  };
+  const esc = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  const csv = (value) => '"' + String(value ?? '').replace(/"/g,'""') + '"';
+
+  function render() {
+    count.textContent = `${trials.length} trial user${trials.length === 1 ? '' : 's'}`;
+    activeCount.textContent = `${trials.filter(t => t.status === 'active' && new Date(t.expires_at).getTime() > Date.now()).length} active`;
+    rows.innerHTML = trials.length ? trials.map(t => `
+      <tr>
+        <td>${esc(t.email)}</td>
+        <td>${esc(t.phone_number)}</td>
+        <td>${esc(fmt(t.started_at))}</td>
+        <td>${esc(fmt(t.expires_at))}</td>
+        <td><span class="pill ${t.status === 'active' ? 'active' : ''}">${esc(t.status)}</span></td>
+        <td>${esc(t.sessions_used)} / ${esc(t.max_sessions)}</td>
+        <td>${t.whatsapp_consent_at ? 'Yes' : 'No'}</td>
+        <td>${esc(t.license_last4)}</td>
+      </tr>`).join('') : '<tr><td colspan="8">No trial users found.</td></tr>';
+    csvBtn.disabled = trials.length === 0;
+  }
+
+  loadBtn.addEventListener('click', async () => {
+    const adminKey = key.value.trim();
+    if (!adminKey) { status.textContent = 'Enter your admin key.'; status.className='status error'; return; }
+    loadBtn.disabled = true; status.textContent='Loading…'; status.className='status';
+    try {
+      const r = await fetch(`${apiBase}/admin/trials`, {
+        method:'GET',
+        cache:'no-store',
+        headers:{Authorization:`Bearer ${adminKey}`}
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.error || 'Could not load trial users.');
+      trials = Array.isArray(data.trials) ? data.trials : [];
+      render();
+      status.textContent = `Loaded ${trials.length} trial user${trials.length === 1 ? '' : 's'}.`;
+      status.className='status success';
+    } catch (e) {
+      status.textContent = e.message || 'Could not load trial users.';
+      status.className='status error';
+    } finally {
+      loadBtn.disabled = false;
+    }
+  });
+
+  csvBtn.addEventListener('click', () => {
+    const header = ['Email','Mobile','Started','Expires','Status','Sessions used','Session limit','Consent at','Key last 4'];
+    const lines = [header.map(csv).join(',')];
+    for (const t of trials) {
+      lines.push([
+        t.email,t.phone_number,t.started_at,t.expires_at,t.status,t.sessions_used,t.max_sessions,t.whatsapp_consent_at,t.license_last4
+      ].map(csv).join(','));
+    }
+    const blob = new Blob(['\ufeff' + lines.join('\r\n')], {type:'text/csv;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href=url; a.download=`buyerpilot-trials-${new Date().toISOString().slice(0,10)}.csv`;
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  });
+})();
+</script>
+</body>
+</html>
