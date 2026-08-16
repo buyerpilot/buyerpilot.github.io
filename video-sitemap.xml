@@ -3,57 +3,12 @@
   <url>
     <loc>https://buyerpilot.github.io/tutorials.html</loc>
     <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/</video:thumbnail_loc>
-      <video:title><![CDATA[BuyerPilot overview: from listings to ranked suppliers]]></video:title>
-      <video:description><![CDATA[A complete BuyerPilot overview showing product selection, quantity input, supplier scanning, deduplication and ranking.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/</video:content_loc>
-      <video:duration>147</video:duration>
-      <video:publication_date>2026-08-05T00:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/</video:thumbnail_loc>
-      <video:title><![CDATA[How to rank Alibaba suppliers with BuyerPilot]]></video:title>
-      <video:description><![CDATA[Select Alibaba products, set order quantity and run marketplace-specific supplier analysis.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/</video:content_loc>
-      <video:duration>71</video:duration>
-      <video:publication_date>2026-08-05T00:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/</video:thumbnail_loc>
-      <video:title><![CDATA[How to rank 1688 suppliers with BuyerPilot]]></video:title>
-      <video:description><![CDATA[Select relevant 1688 offers and create an English-readable, deduplicated supplier shortlist.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/</video:content_loc>
-      <video:duration>73</video:duration>
-      <video:publication_date>2026-08-05T00:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/</video:thumbnail_loc>
-      <video:title><![CDATA[BuyerPilot ranking profiles explained]]></video:title>
-      <video:description><![CDATA[Understand Standard, Price Focused and Quality Focused supplier ranking priorities.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/</video:content_loc>
-      <video:duration>46</video:duration>
-      <video:publication_date>2026-08-05T00:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/</video:thumbnail_loc>
-      <video:title><![CDATA[How to export BuyerPilot supplier rankings to CSV]]></video:title>
-      <video:description><![CDATA[Export supplier ranking inputs, source links and comparison data for Excel or Google Sheets.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/</video:content_loc>
-      <video:duration>49</video:duration>
-      <video:publication_date>2026-08-05T00:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/</video:thumbnail_loc>
-      <video:title><![CDATA[How to start a BuyerPilot trial or activate a licence]]></video:title>
-      <video:description><![CDATA[Start a free trial, activate a paid licence and manage BuyerPilot access.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/</video:content_loc>
-      <video:duration>56</video:duration>
-      <video:publication_date>2026-08-05T00:00:00+05:30</video:publication_date>
+      <video:thumbnail_loc>https://buyerpilot.github.io/buyerpilot-walkthrough-poster.webp</video:thumbnail_loc>
+      <video:title><![CDATA[BuyerPilot complete supplier ranking walkthrough]]></video:title>
+      <video:description><![CDATA[A real-screen BuyerPilot walkthrough from selecting Alibaba and 1688 listings to a deduplicated ranked supplier shortlist.]]></video:description>
+      <video:content_loc>https://buyerpilot.github.io/buyerpilot-walkthrough.mp4</video:content_loc>
+      <video:duration>94</video:duration>
+      <video:publication_date>2026-08-15T00:00:00+05:30</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>

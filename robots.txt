@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin-trials.html
 
 Sitemap: https://buyerpilot.github.io/sitemap.xml
 Sitemap: https://buyerpilot.github.io/video-sitemap.xml

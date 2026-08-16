@@ -1,0 +1,66 @@
+(() => {
+  if (window.__BUYERPILOT_CHAT_LOADER__) return;
+  window.__BUYERPILOT_CHAT_LOADER__ = true;
+
+  const TAWK_URL = 'https://embed.tawk.to/6a8187b3dcdbf81d4fafbbe5/1k04vk5o4';
+  let loading = false;
+
+  function createButton() {
+    if (document.querySelector('[data-buyerpilot-chat-launcher]')) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('data-buyerpilot-chat-launcher', '');
+    button.setAttribute('aria-label', 'Chat with BuyerPilot support');
+    button.textContent = 'Chat with us';
+    Object.assign(button.style, {
+      position: 'fixed',
+      right: '18px',
+      bottom: '82px',
+      zIndex: '2147483000',
+      border: '1px solid rgba(255,255,255,.18)',
+      borderRadius: '999px',
+      padding: '12px 17px',
+      background: '#315efb',
+      color: '#fff',
+      font: '700 14px/1.2 Inter, Arial, sans-serif',
+      boxShadow: '0 10px 30px rgba(0,0,0,.28)',
+      cursor: 'pointer'
+    });
+    button.addEventListener('click', () => loadChat(button));
+    document.body.appendChild(button);
+  }
+
+  function loadChat(button) {
+    if (loading) return;
+    loading = true;
+    button.disabled = true;
+    button.textContent = 'Opening chat…';
+
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_LoadStart = new Date();
+    const previousOnLoad = window.Tawk_API.onLoad;
+    window.Tawk_API.onLoad = function () {
+      try { if (typeof previousOnLoad === 'function') previousOnLoad(); } catch (_) {}
+      button.remove();
+      try { if (typeof window.Tawk_API.maximize === 'function') window.Tawk_API.maximize(); } catch (_) {}
+    };
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = TAWK_URL;
+    script.charset = 'UTF-8';
+    script.setAttribute('crossorigin', '*');
+    script.onerror = () => {
+      loading = false;
+      button.disabled = false;
+      button.textContent = 'Chat with us';
+    };
+    document.head.appendChild(script);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createButton, { once: true });
+  } else {
+    createButton();
+  }
+})();

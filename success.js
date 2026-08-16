@@ -2,6 +2,9 @@
   const params = new URLSearchParams(location.search);
   const key = params.get('license_key') || '';
   const statusParam = params.get('status') || '';
+
+  // Remove all query parameters immediately so licence keys/tokens do not remain in the address bar, history entry or referrer.
+  try { history.replaceState({}, document.title, `${location.pathname}${location.hash || ''}`); } catch (_) {}
   const keyNode = document.querySelector('[data-license-key]');
   const statusNode = document.querySelector('[data-status]');
   const title = document.querySelector('[data-title]');
