@@ -1,0 +1,174 @@
+# Supplier scorecard examples you can copy
+
+> supplier scorecard examples that map to Alibaba/1688 shortlists: what to score, pass-fail gates, weights for tiers/MOQ, and auditable evidence.
+
+
+
+Supplier scorecard examples are only useful if they turn noisy Alibaba and 1688 search results into a defensible, auditable shortlist. Below are copy-ready scorecard patterns for common product types, plus the exact marketplace signals to score vs gate, how to weight tiered pricing and MOQ, and how to capture evidence (links, screenshots, exports) so your team can replay the decision later.
+
+## What are practical supplier scorecard examples for different products?
+
+
+![A clipboard scorecard beside product samples and supplier pages, illustrating product-specific scoring templates – scorecard ](https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/a-clipboard-scorecard-beside-product.webp)
+
+A practical scorecard is product-specific because the risk changes: cosmetics are compliance-heavy, custom electronics are failure-prone, and commodity packaging is mostly about price tiers and lead time. The structure stays the same: **gates first, then weighted ranking**.
+
+### Copy-ready scorecard example: commodity packaging (poly mailers, boxes, labels)
+
+This category is a classic vendor marketplace problem: dozens of near-identical listings, lots of duplicate suppliers, and prices that look cheap only at 1 piece.
+
+Use gates to keep the list clean, then rank mainly on quantity-aware price and fulfillment reliability.
+
+| Section | Field | Type | How to score it on Alibaba/1688 |
+| --- | --- | --- | --- |
+| Gates | Ships to your destination | Pass/Fail | Confirm shipping options and incoterms in chat or listing details |
+| Gates | MOQ within your target | Pass/Fail | Fail if MOQ forces excess inventory you cannot carry |
+| Gates | Sample available | Pass/Fail | Pass if sample cost and shipping are stated or confirmed quickly |
+| Weighted | Tiered unit price at your quantity | 0-10 | Score against the tier that matches your planned order quantity |
+| Weighted | Lead time for your spec | 0-10 | Shorter, confirmed lead times score higher |
+| Weighted | Response speed and clarity | 0-10 | Track first response time and whether they answer in specifics |
+| Weighted | Marketplace trust signals | 0-10 | Verified status, years active, ratings, Trade Assurance where applicable |
+
+If you want a faster way to turn marketplace noise into a ranked set of candidates, start with a workflow that stays on the marketplace page. BuyerPilot is built for this: it deduplicates suppliers across listings and ranks them using extracted platform signals inside a movable panel. The product pages for [Alibaba supplier ranking with extracted seller signals](https://buyerpilot.github.io/alibaba-supplier-ranking.html) and [1688 supplier ranking for English-readable comparison](https://buyerpilot.github.io/1688-supplier-ranking.html) show what gets captured.
+
+### Copy-ready scorecard example: custom electronics (chargers, controllers, small appliances)
+
+Electronics fails in hidden places: inconsistent BOM, weak QC, slow engineering responses. Your scorecard needs heavier weighting on sample, lead time realism, and verification evidence.
+
+| Section | Field | Type | How to score it on Alibaba/1688 |
+| --- | --- | --- | --- |
+| Gates | Can quote your exact spec | Pass/Fail | Fail if they avoid spec questions or push generic catalog items |
+| Gates | Sample lead time and cost | Pass/Fail | Fail if they cannot commit to a sample timeline |
+| Weighted | Engineering response quality | 0-10 | Do they ask clarifying questions and confirm tolerances? |
+| Weighted | Production lead time credibility | 0-10 | Penalize vague answers like “about 15-20 days” with no capacity context |
+| Weighted | Verification and tenure | 0-10 | Years active, verified supplier status, factory audit indicators |
+| Weighted | Tiered price at your quantity | 0-10 | Use your expected volume tier, not the teaser tier |
+| Weighted | After-sales and warranty posture | 0-10 | Written warranty terms or clear failure-handling process |
+
+For electronics, I strongly recommend tracking whether the supplier is a factory or a trading company as a signal, not a verdict. The page on [manufacturer vs trading company indicators](https://buyerpilot.github.io/manufacturer-vs-trading-company.html) lays out what to look for without pretending it is a perfect label.
+
+### Copy-ready scorecard example: regulated or branded-touch products (cosmetics packaging, food-contact, kids items)
+
+This is where gates matter most. If a supplier cannot provide the compliance evidence you need, no amount of savings helps.
+
+| Section | Field | Type | How to score it on Alibaba/1688 |
+| --- | --- | --- | --- |
+| Gates | Compliance documents relevant to your market | Pass/Fail | Pass only if they can provide the right docs, not “we have certificates” |
+| Gates | Traceable company identity | Pass/Fail | Verified supplier status and consistent company name across pages |
+| Weighted | Documentation responsiveness | 0-10 | Speed and completeness when asked for docs |
+| Weighted | Verification, tenure, and dispute posture | 0-10 | Trade Assurance, verification badges, years active |
+| Weighted | Sample quality loop | 0-10 | Can they iterate samples with clear change tracking? |
+| Weighted | Tiered price at your quantity | 0-10 | Still important, but not the top driver |
+
+If you need a fuller checklist to pair with your scorecard, [China supplier vetting and shortlisting steps](https://buyerpilot.github.io/china-supplier-vetting.html) is the companion workflow most buyers use after ranking.
+
+## Which signals should be scored vs treated as pass-fail?
+
+The fastest way to break a scorecard is to score everything. You end up “averaging” a supplier that should have been eliminated. Use this rule: **anything that creates an irreversible business risk becomes a gate**. Everything else becomes a weighted score.
+
+Gates that usually belong in pass-fail for Alibaba and 1688 sourcing:
+
+- **MOQ and packaging constraints** that force unworkable inventory or carton quantities
+- **Sample availability and sample lead time** when you cannot validate without a physical sample
+- **Verification basics** (company identity, obvious red flags, inconsistent company info)
+- **Trade terms you require** (Trade Assurance on Alibaba if your process mandates it, specific payment terms, or shipping capability)
+- **Compliance evidence** for regulated categories
+
+Signals that usually work better as scored metrics:
+
+Price tiers by quantity, lead time, response speed, years active, ratings and reviews, repurchase or reorder indicators (common on 1688), and business type hints (factory vs trading company). These are comparative. A supplier can be “good enough” on one and exceptional on another, and the weighting should decide.
+
+This is also where deduplication matters. If the same supplier appears under five listings, your scorecard gets polluted with duplicates and you waste time “scoring” the same entity repeatedly. A dedicated step for [automatic supplier deduplication across listings](https://buyerpilot.github.io/supplier-deduplication.html) keeps your scorecard aligned to suppliers, not products.
+
+## How do you set weights for price tiers, MOQ, and verification?
+
+
+![A balance scale beside tier pricing and MOQ notes, showing how to weight cost and risk factors – weighting model](https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/a-balance-scale-beside-tier.webp)
+
+Weights should reflect what actually moves your landed cost and your failure risk at your planned order quantity. That sounds obvious, but most buyers accidentally weight the cheapest visible price tier, which is often irrelevant.
+
+Start by defining your scoring scale (I prefer 0-10 per metric because it is easy to normalize), then allocate weight across a small set of drivers. Keep it stable across a project so comparisons remain meaningful.
+
+### A weighting template you can copy (general consumer goods)
+
+| Metric | Weight | Notes for Alibaba/1688 |
+| --- | ---: | --- |
+| Tiered unit price at target quantity | 35% | Score against your quantity tier; include tooling or setup fees separately |
+| MOQ fit | 15% | Penalize MOQs that force overbuy; do not “average it out” |
+| Lead time (sample + production) | 20% | Split into sample lead time and production lead time if needed |
+| Verification and marketplace trust | 15% | Verified supplier status, years active, Trade Assurance where relevant |
+| Responsiveness and clarity | 15% | Response speed plus specificity, not friendliness |
+
+Two practical details make this work in real life:
+
+First, treat **MOQ** as both a gate and a score depending on your situation. If anything above 2,000 units is impossible, set MOQ as a gate. If you can flex between 500 and 2,000, gate only the extremes and score the rest.
+
+Second, break “price” into the price you will actually pay. For a price comparison spreadsheet, the cleanest approach is to calculate an evaluated unit price at your target quantity and currency, then score suppliers relative to the best value.
+
+If you are building this in Excel, Microsoft’s documentation for [XLOOKUP](https://support.microsoft.com/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929) is the most reliable way to pull the correct tier price from a tier table without fragile nested IFs.
+
+### How to score tiered pricing without getting tricked
+
+On Alibaba and 1688, the “headline” price is frequently the lowest tier, sometimes tied to unrealistic quantities. Your scorecard should store:
+
+- Target quantity (the quantity you are evaluating)
+- The tier bracket that matches that quantity
+- Unit price for that bracket
+- Notes on what is included (packaging, printing, accessories)
+
+When you do this consistently, the price score becomes meaningful and you can defend it internally. It also makes supplier negotiation cleaner because you are comparing equivalent tiers.
+
+### Where verification belongs (and where it does not)
+
+Verification signals reduce certain types of risk, but they do not guarantee quality. Use them as a meaningful weight, then force proof through samples, QC plans, and clear specs.
+
+For Alibaba-specific protection, Alibaba publishes the scope of its buyer protection programs and how disputes work. Keep your team aligned on what Trade Assurance covers by referencing [Alibaba Trade Assurance overview](https://www.alibaba.com/trade-assurance) during scorecard design, not after a problem happens.
+
+## How do you capture evidence so the scorecard is auditable?
+
+An auditable scorecard is one where a teammate can answer, “Why did we rank Supplier B above Supplier A?” without reopening 30 tabs and guessing. The trick is to store the evidence at the same time you store the score.
+
+### Minimum evidence set (what to store per supplier)
+
+Store these fields for every supplier you score, even if you do it in a simple sheet:
+
+| Evidence field | Why it matters | Example |
+| --- | --- | --- |
+| Supplier page URL | Proves which seller entity you evaluated | Supplier storefront link |
+| Listing URL(s) used | Shows the context for price tiers and MOQ | The specific product page you priced from |
+| Capture date | Marketplaces change fast | Date you pulled the data |
+| Tiered price snapshot | Defends your price score | Tier table values at target quantity |
+| Verification signals snapshot | Defends your trust score | Verified status, years active, ratings |
+| Conversation proof | Defends lead time and sample claims | Chat excerpt or quote summary |
+
+If you want to do this without manual copy-paste, exporting the underlying supplier intelligence into a CSV is the cleanest workflow. BuyerPilot supports this in Pro so your scorecard stays tied to the extracted marketplace data, including the ranking inputs and confidence. The page on [Supplier CSV export fields for supplier comparison](https://buyerpilot.github.io/csv-supplier-export.html) shows what gets exported and why it is useful for audit trails.
+
+For teams that need formal procurement traceability, this ties directly into supplier relationship management meaning: SRM is the discipline of managing supplier performance and risk over time, and a scorecard with evidence is the simplest SRM artifact that a small sourcing team can maintain without buying a heavy supplier management system.
+
+### A practical Excel method to compare supplier sets and find matches
+
+When you export supplier data from different searches (or two teammates export separately), you will want to match suppliers and spot duplicates. Use a stable key if you have one (supplier URL is usually best), then compare.
+
+In Excel, you can use this pattern:
+
+```excel
+=IF(ISNUMBER(MATCH([@SupplierURL],Sheet2!$A:$A,0)),"Match","New")
+```
+
+That answers the common question “How do I compare two sets of data in Excel for matches?” in a way that works on real supplier exports. If you need a richer approach, Power Query is Microsoft’s recommended tool for repeatable data merges; their [Power Query documentation](https://support.microsoft.com/en-us/office/power-query-documentation-8c1f2a3a-3c8b-4c0d-9f7d-6a0c7b1a2b4d) is the best starting point.
+
+## Frequently Asked Questions
+
+**What should a supplier scorecard look like?**  
+A supplier scorecard should have pass-fail gates for non-negotiables (MOQ, compliance, sample feasibility) and a weighted ranking section for comparisons (tiered price at target quantity, lead time, verification, responsiveness). It should also store evidence links and capture dates so the scoring is auditable.
+
+**How do you evaluate your suppliers?**  
+Evaluate suppliers by scoring what varies (price tiers, lead time, response quality, marketplace trust signals) and gating what can break the deal (compliance, identity verification, unworkable MOQ). Always validate with samples and written confirmations, not just marketplace badges.
+
+**How do I compare two sets of data in Excel for matches?**  
+Use a stable key like supplier URL, then run MATCH or XLOOKUP to flag duplicates across sheets. If you do this often, Power Query merges are more repeatable and less error-prone than formulas.
+
+**What are the four types of suppliers?**  
+A practical sourcing breakdown is manufacturer (factory), trading company, distributor/wholesaler, and service supplier (like packaging or logistics). On Alibaba and 1688, “factory vs trading company” is a useful signal, but you still verify capability through samples, documentation, and responsiveness.
+
+Your next step is simple: pick one of the scorecard templates above, set three gates you will not compromise on, then run a single marketplace search and score only 10 suppliers end-to-end. Once you can export or record the evidence cleanly, scaling to 50 suppliers becomes a data problem, not a tab problem.
