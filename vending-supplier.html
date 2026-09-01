@@ -1,0 +1,141 @@
+# Vending supplier: how to vet and compare sources
+
+> vending supplier vetting for vending routes: compare pricing tiers, case packs, lead times, fill rate, compliance, and returns with a scorecard.
+
+
+
+A **vending supplier** is only “good” if it keeps your machines in-stock with compliant product at predictable landed cost. This guide gives you a field-tested evaluation method: the exact criteria to score, how to compare case packs and tiered pricing, what to verify to avoid substitutions and expired inventory, and how to document a defensible shortlist you can share with a partner or auditor.
+
+## What criteria matter when choosing a vending supplier?
+
+
+![A scorecard beside a packing slip and case pack showing how to evaluate supplier reliability – supplier vetting](https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/a-scorecard-beside-a-packing.webp)
+
+The criteria that matter for a vending supplier are the ones that hit route profit and service levels: **landed cost**, **availability**, **reorder reliability**, **substitution behavior**, and **expiration dating discipline**. If a supplier is “cheap” but ships partials, swaps SKUs, or sends short-dated product, you pay for it in truck rolls, refunds, and dead inventory.
+
+Start with a scorecard mindset. BuyerPilot is built around exactly this kind of evidence-based ranking and exportable supplier intelligence for crowded marketplaces like Alibaba and 1688, and the same logic applies even when your sources are distributors, importers, or catalogs. If you want a template for documenting decisions, the workflow in [supplier scorecard: build a defensible shortlist](https://buyerpilot.github.io/blog/supplier-scorecard-build-a-defensible-shortlist) maps cleanly to vending.
+
+Here’s a practical weighting approach that matches how vending routes actually break:
+
+| Criterion (what you score) | What “good” looks like in vending operations | What to ask for / verify |
+| --- | --- | --- |
+| Landed cost per sellable unit | Stable cost after freight, fuel surcharges, and case pack math | Price file, freight tables, Incoterms (if importing), surcharge policy |
+| Fill rate and backorders | Clear rules: ship-complete vs partials, predictable backorder handling | Written policy, historical fill rate if available, backorder ETA logic |
+| Substitutions | No substitutions without approval, or strict like-for-like rules | Substitution policy in writing, approval workflow |
+| Lead time consistency | Reorder lead time you can plan around, not “varies” | Cutoff times, days-in-transit, warehouse location(s) |
+| Expiration dating | Minimum remaining shelf-life on arrival, lot traceability | Dating policy, lot/batch info, recall process |
+| Returns and damage claims | Straightforward claims window and credit process | RMA steps, photo requirements, timelines |
+| Compliance and restricted products | Clear rules on age-restricted items, labeling, and product safety | Documentation, certifications where relevant, restricted list |
+| Account support | One owner for issues, proactive notifications | Named rep, escalation path, service hours |
+
+Two quick definitions help when you’re comparing sources. **Supplier meaning in business** is simply the party that provides goods to your operation; a vendor is often used interchangeably, but in procurement the “supplier” usually implies an ongoing relationship and performance management. If you want a clean explanation for training staff, see [difference between supplier and vendor](https://buyerpilot.github.io/manufacturer-vs-trading-company.html) (the page is written for sourcing, but the distinction carries over).
+
+## Which supplier types exist (manufacturer, distributor, importer)?
+
+A vending supplier typically falls into one of three buckets: manufacturer-direct, distributor/wholesaler, or importer/private-label consolidator. Each has a predictable set of tradeoffs in MOQ, case quantities, price tiers, and risk.
+
+**Manufacturer-direct** means you buy from the brand owner or the factory that produces the item. This can work for high-volume staples (snacks, beverages, consumables), especially if you can hit pallet quantities. The upside is pricing and fewer middlemen. The downside is MOQs, less flexibility on mixed-SKU orders, and sometimes slower handling for small accounts.
+
+**Distributor/wholesaler** is the common path for route operators because it matches vending reality: mixed cases, frequent reorders, and a wide catalog. You pay margin for that convenience. The real discriminator is not the catalog size, it’s whether they ship what you ordered, when you needed it, with the dating you require.
+
+**Importer/consolidator (including “merchant supplier” models)** buys from upstream factories and resells domestically. This is where you can find unique SKUs or better unit economics, but you inherit more compliance and continuity risk, and you need to understand shipping terms and lead times.
+
+If your discovery source is a **vendor marketplace**, treat it as lead generation, not validation. Marketplaces are good at showing options, bad at proving operational reliability. BuyerPilot’s approach of extracting platform signals, deduplicating repeated sellers, and showing ranking confidence exists because marketplace listings are noisy by default. If you do use Alibaba or 1688 to source vending-adjacent items (parts, accessories, some packaged goods where legal), start with [Alibaba vs 1688 sourcing differences buyers should know](https://buyerpilot.github.io/alibaba-vs-1688-sourcing.html) so you don’t assume the same rules apply.
+
+For compliance context in the US, the FDA’s overview of [food facility registration](https://www.fda.gov/food/food-industry/how-register-food-facility) is a useful baseline when you’re dealing with imported or repacked food items, even if you are not the registrant yourself. It tells you what “registered facility” actually means in practice.
+
+## How do you compare pricing, case packs, and reorder reliability?
+
+
+![Two different case packs and a calculator illustrating landed cost comparison by unit – pricing comparison](https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/two-different-case-packs-and.webp)
+
+Pricing comparison fails in vending when you compare the wrong unit. You need **landed cost per sellable unit** at your real reorder quantities, with case pack and tier breaks accounted for, and then you need to stress-test that against reorder reliability.
+
+### Step 1: Normalize to landed cost per sellable unit
+
+A vending supplier quote that looks cheaper often hides one of three things: a larger case pack than you can move before dating risk, freight that flips the math, or tiered pricing that only applies at unrealistic quantities.
+
+Use this structure:
+
+- Unit cost at your quantity tier (not the “starting at” price)
+- Case pack size (units per case) and whether mixed cases are allowed
+- Freight and surcharges to your dock (or to each route if you break down shipments)
+- Damage/shortage assumptions based on their policy and your experience
+
+A simple comparison table forces honesty:
+
+| Supplier | SKU | Price tier basis | Case pack | Freight terms | Landed cost per unit | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| A | Item X | 1-10 cases | 24 | Delivered | $X.XX | No substitutions |
+| B | Item X | 1-5 cases | 30 | Freight added | $X.XX | Short dating risk |
+| C | Item X | 1 case | 24 | Pickup | $X.XX | Requires will-call |
+
+If you are evaluating many sources from a marketplace, you need deduplication. The same supplier can appear across dozens of listings, which makes “comparison” feel like progress while you’re really just sorting duplicates. BuyerPilot’s [automatic supplier deduplication for repeated sellers](https://buyerpilot.github.io/supplier-deduplication.html) exists specifically to prevent that trap.
+
+### Step 2: Compare MOQ vs case quantities like an operator, not a buyer
+
+MOQ is common in factory sourcing; case quantities are the day-to-day reality in vending replenishment. The key is matching order size to velocity and shelf-life. A low unit price at high MOQ is useless if the product expires before it sells, or if it ties up cash that should be in higher-turn SKUs.
+
+For each candidate supplier, document:
+
+- Minimum order rules (by dollars, cases, pallets, or weight)
+- Mixed-case allowances and pick fees
+- Short-dated discount programs (and whether you can refuse them)
+
+### Step 3: Validate reorder reliability with two policies and one test order
+
+Reorder reliability is mostly explained by (1) how they handle out-of-stocks and (2) how they communicate. Ask for their written policy on backorders and substitutions. If they cannot provide it, assume the worst.
+
+Then run a small but realistic test order. Include one fast mover and one long-tail SKU. You’re testing the system: fill rate, packing accuracy, dating, and how they behave when something is unavailable.
+
+If you want to formalize this like procurement teams do, look at the structure of a supplier performance metrics scorecard. The ISO 9001 standard is often referenced for supplier control in quality management systems; ISO publishes the standard at [ISO 9001 quality management](https://www.iso.org/iso-9001-quality-management.html), and while you don’t need certification to run a vending route, the discipline of documented criteria and corrective actions translates well.
+
+## What due diligence reduces stockout and compliance risk?
+
+Due diligence for a vending supplier is less about corporate paperwork and more about preventing three operational failures: machines empty, product not saleable, and product you should not have stocked in the first place.
+
+### Stockout risk: lead times, fill rate, and substitutions
+
+Get the basics in writing: cutoff times, ship days, carrier options, and whether they ship partials. If they ship partials, confirm whether they split freight charges or you pay twice. If they substitute, require explicit approval for any SKU change. “Equivalent item” is a phrase that causes route-level chaos.
+
+Also ask how they handle allocations during shortages. A supplier that allocates fairly to existing accounts can be worth more than a cheaper source that ships to whoever yells loudest that week.
+
+### Compliance and restricted products: know what you are allowed to sell and source
+
+Compliance varies by country and product category, but the high-risk areas in vending are consistent: age-restricted products, regulated supplements, products with specific labeling requirements, and anything with temperature control requirements.
+
+For US operators, the FDA’s labeling rules are a reference point even when you are not the manufacturer. The FDA’s page on [food labeling and nutrition](https://www.fda.gov/food/food-labeling-nutrition) is a practical starting place to understand what “properly labeled” means. If a supplier is importing or relabeling, you need to know who is responsible for compliance, and you need traceability (lot codes, invoices, and recall contact).
+
+Expiration dating is where compliance meets profitability. Set a minimum remaining shelf-life requirement on receipt, and enforce it. If a supplier pushes short-dated inventory to hit their own turns, your machines become their clearance channel.
+
+### Shipping terms, damage, and returns: control the hidden costs
+
+Shipping terms decide who owns the problem when a case arrives crushed or short. For importers, Incoterms matter. The International Chamber of Commerce maintains the official Incoterms framework; their overview at [ICC Incoterms rules](https://iccwbo.org/business-solutions/incoterms-rules/) is the authoritative reference for what terms like FOB and DDP actually mean.
+
+Returns policy should be evaluated like a contract, even if it’s a web page. Confirm: claims window, whether you need to keep packaging, whether they issue call tags, and how credits are applied. A generous return policy that requires a four-week approval cycle still hurts cash flow.
+
+## Build a documented shortlist with a comparison tool mindset
+
+A shortlist is defensible when someone else can look at your notes and reach the same conclusion. That’s the whole point of a supplier management system, even if your “system” is a spreadsheet and a shared folder. You’re not just picking a supplier, you’re building a repeatable method for future categories and route expansion.
+
+Use a simple scorecard plus evidence attachments: quotes, screenshots of policies, freight tables, and photos from test deliveries. If your team already lives in Excel or Google Sheets, make sure you can export the underlying evidence, not just a final score. BuyerPilot’s [supplier CSV export for audit-ready comparisons](https://buyerpilot.github.io/csv-supplier-export.html) is designed for that exact handoff: links, inputs, and the rationale behind each rank.
+
+If you need a sourcing workflow that stays inside marketplaces while you research, the [supplier ranking browser extension workflow](https://buyerpilot.github.io/supplier-ranking-extension.html) shows how we think about comparing sellers without juggling tabs. Even if you never touch Alibaba, the method is the same: extract signals, weight them, record the evidence, then decide.
+
+A practical note on buyer power and supplier power: as a single route operator, you rarely have pricing power, but you can build reliability power. Pay on time, forecast honestly, and consolidate volume into fewer suppliers per category. Your leverage comes from being easy to serve and predictable, not from negotiating like a big-box retailer.
+
+## Frequently Asked Questions
+
+**What are the 5 key supplier evaluation criteria?**  
+For vending, the five that matter most are landed cost, fill rate, lead time consistency, substitution behavior, and expiration dating discipline. If you score only price and ignore reliability, you will pay for it in stockouts and waste.
+
+**What are the four types of suppliers?**  
+A practical breakdown is manufacturer-direct, distributor/wholesaler, importer/consolidator, and local cash-and-carry or club-style retail supply. The right mix depends on your SKU velocity, storage capacity, and compliance risk tolerance.
+
+**What is another word for deduplication?**  
+Common alternatives are de-duplication, duplicate removal, or record matching. In sourcing, it often means identifying when multiple listings or catalog entries point to the same underlying supplier.
+
+**What are Tier 1, Tier 2, and Tier 3 suppliers?**  
+Tiering describes distance from the end brand: Tier 1 supplies the brand or retailer directly, Tier 2 supplies Tier 1, and Tier 3 is further upstream (raw materials or components). For vending inventory, you usually interact with Tier 1 distributors or importers, unless you buy manufacturer-direct.
+
+If you want a better vending supplier decision this week, build a one-page scorecard, run a test order, and force every claim into evidence you can file: a written policy, a dated quote, a freight table, or a delivery photo. Start with your top 10 SKUs by route revenue, because those are the ones that punish unreliable supply fastest.
