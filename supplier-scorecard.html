@@ -1,171 +1,211 @@
-# Supplier scorecard: build a defensible shortlist
-
-> supplier scorecard for Alibaba/1688: weight price tiers, verification and seller signals, dedupe suppliers, and export an audit-ready shortlist.
-
-
-A **supplier scorecard** is a repeatable way to turn messy Alibaba and 1688 browsing into a ranked shortlist you can defend with evidence, not vibes. The practical version combines quantity-aware pricing, marketplace verification, seller behavior signals, and risk flags, then keeps the proof trail so your team can review and audit the decision later.
-
-## What is a supplier scorecard and what should it include?
-
-
-![A printed supplier scorecard beside spec sheets and evidence folders, showing what to include – scorecard design](https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/a-printed-supplier-scorecard-beside.webp)
-
-A supplier scorecard is a structured rubric that converts marketplace evidence into comparable scores, so you can rank suppliers and explain why Supplier A beat Supplier B. For sourcing buyers, the scorecard should be built from signals you can actually observe on the vendor marketplace pages and validate during outreach, not abstract KPIs you cannot measure pre-sample.
-
-A useful scorecard has three layers:
-
-**1) Commercial reality (what you will actually pay).** This is where most shortlists fail, because buyers compare the lowest advertised price instead of the price at their target quantity. Your scorecard needs price tiers by quantity, MOQ, and whether the tier includes packaging, customization, or shipping terms (even if the answer is “unknown yet”).
-
-**2) Marketplace trust and operational signals (how likely they are to execute).** On Alibaba that often means Trade Assurance eligibility, verification badges, years active (tenure), transaction or performance indicators shown on the profile, and responsiveness proxies. On 1688 it often means repurchase or reorder signals, store ratings, and platform behavior that correlates with reliability for domestic buyers.
-
-**3) Risk flags and fit (why this supplier could burn you).** Factory vs trading company cues, category mismatch, suspiciously broad catalogs, inconsistent company names across listings, or a price curve that looks engineered to bait clicks.
-
-If you want a clean template, keep it tight. A scorecard that tries to capture everything becomes a spreadsheet you never finish. The goal is a defensible shortlist, not a dissertation.
-
-A simple structure that holds up in a team review looks like this:
-
-| Scorecard area | What you record | Why it matters in real sourcing |
-| --- | --- | --- |
-| Quantity-aware pricing | Tiered price at your target quantity, MOQ, tier breaks | Prevents “low price bait” and makes comparisons fair |
-| Verification and protections | Badges, verification status, Trade Assurance signals | Reduces counterparty risk and improves dispute options |
-| Seller strength signals | Tenure, ratings, review volume, response proxies, repurchase | Suggests consistency and reduces the chance of ghosting |
-| Fit and capability | Product focus, materials/process claims, customization, QA hints | Avoids suppliers who cannot actually build your spec |
-| Risk flags | Duplicates, name inconsistencies, too-good-to-be-true tiers | Stops you from shortlisting avoidable problems |
-| Evidence trail | Listing links, store links, screenshots/notes, date captured | Makes the decision auditable and easy to revisit |
-
-If you are building this workflow specifically for Alibaba and 1688 browsing, it helps to work inside the pages you already use. BuyerPilot is built around that constraint: it stays on the marketplace pages with a movable ranking panel and shows which signals are driving the score, plus a score confidence indicator you can sanity-check before you trust the ranking.
-
-## How do you weight price tiers, verification, and seller signals?
-
-Vendor marketplace weighting is a risk management decision. The “right” weights depend on whether you are optimizing for lowest landed cost, fastest sampling, or lowest failure risk, but a scorecard should always make one thing non-negotiable: **price must be evaluated at a quantity you intend to buy**.
-
-### Weight price tiers like a curve, not a single number
-
-A single unit price is easy to game. Tiered pricing is harder to fake because the curve has to make sense across quantities. When you score pricing, capture at least these fields: MOQ, tier 1 quantity and price, tier 2 quantity and price, and your target quantity price (or the closest tier). If the listing only shows a teaser price, score it as “unknown” and force it into outreach.
-
-A practical weighting approach is to give pricing a strong but not dominant share of the total (many teams land around “largest single bucket” rather than “majority of the score”). The reason is simple: you can often negotiate price, but you cannot negotiate a supplier into being responsive, compliant, or honest.
-
-### Treat verification and protections as risk reducers
-
-On Alibaba, Trade Assurance is not a guarantee of perfection, but it does change dispute dynamics because it routes more of the transaction inside Alibaba’s framework. Alibaba positions Trade Assurance as an order protection service with payment and shipping terms defined in the contract; you can read the current description on Alibaba’s own help pages and product materials, but the key sourcing takeaway is that it provides a clearer paper trail than off-platform payment arrangements. Use it as a positive signal, then still do your own checks.
-
-Verification badges should be scored as evidence, not as a substitute for diligence. You are looking for consistency: the company identity, years active, and business scope should line up across the supplier profile and their best-performing listings.
-
-### Use seller signals as execution proxies, not vanity metrics
-
-Response rate, on-time delivery indicators, store ratings, and review patterns are proxies for operational behavior. They are imperfect, but they are better than nothing when you are still pre-sample. Where possible, anchor your interpretation in the platform’s own definitions. For example, Alibaba publishes explanations of metrics and platform programs across its help and seller documentation; use those definitions so your team is aligned on what a “response rate” actually measures on that platform.
-
-On 1688, repurchase and reorder signals matter because they reflect repeat domestic buying behavior. A high repurchase signal does not automatically mean the factory is good for export compliance, but it is a strong indicator the seller fulfills orders consistently enough that buyers come back.
-
-If you want a clean way to express weighting in a scorecard review, write it down as policy: “We weight price at target quantity higher than headline price; we treat verification and protections as risk reducers; we treat seller signals as execution proxies; we cap the effect of any single signal to avoid badge-chasing.” That last part prevents one shiny badge from overpowering weak pricing evidence or obvious risk flags.
-
-## How do you score and rank suppliers while deduplicating duplicates?
-
-
-![Two similar listings merged into one supplier record, illustrating deduplication before ranking – supplier deduplication](https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/two-similar-listings-merged-into.webp)
-
-Scoring without deduplication creates fake choice. Alibaba and 1688 search results often show multiple listings that map back to the same supplier, sometimes under slightly different names or storefront variations. If you rank listings instead of suppliers, your “top 10” can quietly become “top 3 suppliers repeated.”
-
-Deduplication is the step that turns browsing into a real shortlist.
-
-### Start by defining the supplier as the unit of analysis
-
-A supplier is an external stakeholder that provides goods or services to your business. In sourcing, that definition matters because your risk and performance follow the supplier entity, not the individual listing. That is the practical version of supplier meaning in business, and it is why your scorecard should attach evidence to the supplier profile and store, then treat listings as supporting artifacts.
-
-### Score with inputs you can defend in a meeting
-
-A supplier performance metrics scorecard only works if each score maps to an observable input. “Seems professional” does not survive a team review. “Tenure shows 6+ years on-platform, store rating above X, repurchase signal present, and tiered price at 1,000 units is within our target” does.
-
-If you want to make scoring less subjective, use a rubric that converts each signal into points with a written rule. Keep it simple and consistent. A good rubric has three properties:
-
-1. It is **platform-specific** (Alibaba signals differ from 1688 signals).
-2. It is **quantity-aware** (pricing uses tiers and your target quantity).
-3. It includes a **confidence note** when evidence is thin (new seller, missing tiers, limited reviews).
-
-BuyerPilot’s approach is exactly that: platform-specific extraction, supplier ranking, and confidence on the score so you can see when a supplier is “high” because the evidence is strong versus “high” because the page lacks data and the model is extrapolating conservatively. If duplicates are your daily pain, the [automatic supplier deduplication across repeated listings](https://buyerpilot.github.io/supplier-deduplication.html) page shows the workflow conceptually, and why it matters before you ever export a list.
-
-### Keep an evidence trail that survives handoff
-
-A scorecard is only defensible if someone else can reproduce the inputs. That means you need links to the supplier store, the specific listing(s) you used for pricing tiers, and notes on any risk flags. If you are collaborating, a CSV export is the fastest way to keep the shortlist auditable in Sheets or Excel, then attach outreach notes and sample outcomes later. If you want that exportable workflow, [Supplier CSV export with ranking inputs and links](https://buyerpilot.github.io/csv-supplier-export.html) is the clean handoff format most teams expect.
-
-## What does a “good” scorecard workflow look like on Alibaba and 1688?
-
-A good workflow is one you can repeat under time pressure. It keeps you inside the marketplace, minimizes tab chaos, and produces a shortlist you can defend in a review with product, ops, and finance.
-
-Here is the workflow we built BuyerPilot around, because it matches how sourcing buyers actually work.
-
-### Step-by-step workflow (repeatable in one sitting)
-
-1. Set your target quantity and your “walk-away” constraints (MOQ ceiling, target tier quantity, must-have verification or protections).
-2. Search on Alibaba or 1688 and open candidates that look relevant, but do not start messaging yet.
-3. Deduplicate to collapse repeated listings into supplier entities, then rank suppliers based on extracted signals and quantity-aware pricing.
-4. Review the top set and annotate risk flags: business type cues (manufacturer vs trading company), catalog mismatch, unrealistic tier curves, inconsistent identity.
-5. Export your shortlist with evidence links, then run outreach in batches with a standardized RFQ template.
-
-The key is that ranking happens before outreach. Outreach is expensive. It eats time, and it creates false momentum because “they replied quickly” can overshadow weak tier pricing or missing verification.
-
-If you want to see the on-page workflow concept, [Supplier ranking browser extension workflow and security model](https://buyerpilot.github.io/supplier-ranking-extension.html) explains how the panel sits on the marketplace page and why that matters for speed and evidence capture.
-
-### Alibaba specifics: what to capture for a defensible scorecard
-
-Start with pricing tiers and MOQ, then capture the trust layer: Trade Assurance eligibility, verification badges, and tenure. Add seller behavior signals shown on the platform, and finally capture fit cues like product focus and whether they look like a true manufacturer.
-
-If you need a marketplace-specific breakdown of what gets extracted and compared, the [Alibaba supplier ranking signals: pricing, ratings, tenure, Trade Assurance](https://buyerpilot.github.io/alibaba-supplier-ranking.html) page is the clean reference for what buyers usually want in the scorecard columns.
-
-### 1688 specifics: what to capture that Alibaba buyers often miss
-
-1688 is built for domestic China buying behavior, which means some of the strongest signals are different. Repurchase or reorder indicators and store ratings often carry more weight than export-facing badges. You still need tiered pricing and MOQ, but you should be extra strict about identity consistency and capability cues because the listing may be optimized for domestic buyers, not for your compliance needs.
-
-For an English-readable view of the 1688 workflow and signals, [1688 supplier ranking with repurchase signals and tiered pricing](https://buyerpilot.github.io/1688-supplier-ranking.html) maps well to a scorecard you can share with a non-Chinese-reading teammate.
-
-### Factory vs trading company cues belong in the scorecard, but not as a veto
-
-Teams often treat “trading company” as an automatic disqualifier. That is sloppy sourcing. Plenty of trading companies execute well, especially when they specialize and have strong QC processes. The scorecard should record business-type indicators as a signal, then let pricing tiers, verification, responsiveness, and risk flags do the heavy lifting.
-
-If you want a practical way to score this without turning it into ideology, [manufacturer vs trading company indicators for sourcing decisions](https://buyerpilot.github.io/manufacturer-vs-trading-company.html) lays out what to look for and how to treat it as one input among many.
-
-## Supplier relationship management meaning: where the scorecard fits (and where it does not)
-
-Supplier relationship management meaning, in practice, is the set of processes you use to onboard, measure, and improve supplier performance over time. A supplier scorecard is part of that system, but only one slice: it is strongest during discovery and shortlisting, then it should evolve into post-order metrics like defect rates, lead time adherence, and corrective action responsiveness.
-
-If you try to force full SRM into an Alibaba/1688 shortlist scorecard, you will end up inventing numbers. Keep the pre-purchase scorecard focused on marketplace evidence plus what you can validate in RFQ and sampling.
-
-A clean separation looks like this:
-
-| Stage | What you can score credibly | What you should not pretend to score yet |
-| --- | --- | --- |
-| Marketplace research | Tier pricing, MOQ, verification, tenure, ratings, repurchase, risk flags | True on-time delivery performance, true defect rate, audit outcomes |
-| RFQ + sampling | Quote clarity, willingness to share specs, sample quality, communication | Long-term capacity constraints without proof |
-| First production runs | On-time delivery, defect rate, packaging compliance, issue handling | “Strategic partner” status |
-| Ongoing | Continuous improvement, cost-down roadmaps, supplier development | None, this is where SRM becomes real |
-
-If your team uses a supplier management system later (ERP, SRM, or procurement suite), your marketplace scorecard becomes the intake record. That is why the evidence trail and export matter: you want your supplier registration step to start with clean, deduped supplier identities and links to what you saw when you made the call.
-
-For a neutral baseline on why procurement teams formalize supplier evaluation, the UK Chartered Institute of Procurement and Supply (CIPS) publishes practical guidance on supplier evaluation and performance management; their resources are a good sanity check when you are defining what “defensible” means in procurement terms: https://www.cips.org/knowledge/procurement-topics-and-skills/supplier-relationship-management/
-
-## Why should a purchasing specialist evaluate supplier performance before shortlisting?
-
-Why should a purchasing specialist evaluate supplier performance before shortlisting? Because the cost of being wrong shows up late, when it is expensive: failed samples, missed ship dates, quality rework, and internal blame. A lightweight scorecard is how you push that risk forward, while you still have optionality.
-
-Marketplace signals are not perfect measures of performance, but they are early indicators you can use to avoid obvious traps: duplicate suppliers masquerading as variety, teaser pricing that collapses at your quantity, and sellers with thin history or inconsistent identity.
-
-If you want a widely accepted external framework for thinking about supplier evaluation criteria, ISO 9001 is often used as a reference point for supplier control and evaluation in quality management systems. You do not need to be ISO certified to use the logic, but the principles are useful when you define what evidence you want to keep in your scorecard: https://www.iso.org/standard/62085.html
-
-## Frequently Asked Questions
-
-**What should a supplier scorecard look like?**  
-A good supplier scorecard is a one-page rubric that ties every score to observable evidence: tiered pricing at your target quantity, verification/protection signals, seller behavior proxies, and risk flags. It should also keep links to the supplier store and the listings used for pricing.
-
-**How do you evaluate your suppliers?**  
-Start with marketplace evidence (tiers, MOQ, verification, tenure, ratings, repurchase), then validate through RFQ and samples. After your first orders, switch to real performance metrics like defect rate, lead time adherence, and issue resolution speed.
-
-**What are the 5 key supplier evaluation criteria?**  
-For pre-shortlist sourcing, the most defensible five are quantity-aware pricing, verification/protections, seller execution signals, capability fit, and risk flags. Post-order, replace proxies with actual delivery and quality data.
-
-**What does supplier information mean?**  
-Supplier information is the identity and evidence you need to assess and onboard a supplier: company name consistency, marketplace profile, product scope, verification status, and commercial terms like MOQ and tier pricing. In a scorecard, it is the proof trail behind the score.
-
-**What is another word for deduplication?**  
-Common alternatives are de-duplication, duplicate removal, or record consolidation. In supplier research, the intent is the same: collapse repeated listings into a single supplier entity before ranking.
-
-A defensible shortlist is usually built before you send a single message: dedupe the marketplace noise, score suppliers on tier pricing and trust signals you can point to, and export the evidence so your team can review it quickly. Start by picking one product category, define your target quantity, and build your first scorecard in a spreadsheet, then tighten it until it takes under an hour to produce a top-10 you would be comfortable defending.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Supplier Scorecard: Build a Defensible Shortlist – BuyerPilot</title>
+<meta content="Supplier scorecard for Alibaba/1688: weight price tiers, verification and seller signals, dedupe suppliers, and export an audit-ready shortlist." name="description"/>
+<meta content="#060b14" name="theme-color"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.min.css?v=11.3" rel="stylesheet"/>
+<script defer src="config.min.js?v=11.1"></script>
+<script defer src="analytics.min.js?v=11.0"></script>
+<script defer src="script.min.js?v=11.3"></script>
+<style>
+  article h1, article h2, article h3, article h4 { color: #ffffff !important; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+  article p, article li { color: #cbd5e1 !important; font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.25rem; }
+  article a { color: #60a5fa !important; text-decoration: underline; }
+  article blockquote { border-left: 4px solid #3b82f6; padding-left: 1rem; color: #94a3b8 !important; margin: 1.5rem 0; font-style: italic; }
+  article table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; color: #cbd5e1; }
+  article th, article td { border: 1px solid #334155; padding: 12px; text-align: left; }
+  article th { background-color: #1e293b; color: #ffffff !important; }
+  article img { max-width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; display: block; }
+  article ul, article ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  article li { margin-bottom: 0.5rem; }
+  article pre { background-color: #0f172a; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1.5rem 0; border: 1px solid #334155; }
+  article code { color: #38bdf8; font-family: monospace; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="BuyerPilot home" class="brand brand-primary" href="https://buyerpilot.github.io/">
+<span aria-hidden="true" class="brand-mark"><img alt="" height="44" src="favicon.svg" width="44"/></span>
+<span class="brand-name">BuyerPilot</span>
+</a>
+<nav aria-label="Primary navigation" class="desktop-nav compact-nav">
+<a href="index.html#demo">Product</a>
+<a href="blog.html">Blog</a>
+<a href="index.html#pricing">Pricing</a>
+<a href="index.html#faq">FAQ</a>
+<a href="manage.html">Manage subscription</a>
+</nav>
+<div class="nav-actions">
+<a class="button button-primary button-small" href="index.html#pricing">Start free trial</a>
+</div>
+</div>
+</header>
+
+<main id="main" class="section" style="padding-top: 120px; padding-bottom: 80px;">
+<div class="container" style="max-width: 800px; margin: 0 auto;">
+  <article>
+    <h1 id="supplier-scorecard-build-a-defensible-shortlist">Supplier scorecard: build a defensible shortlist</h1>
+    <blockquote>
+    <p>Supplier scorecard for Alibaba/1688: weight price tiers, verification and seller signals, dedupe suppliers, and export an audit-ready shortlist.</p>
+    </blockquote>
+    <p>A <strong>supplier scorecard</strong> is a repeatable way to turn messy Alibaba and 1688 browsing into a ranked shortlist you can defend with evidence, not vibes. The practical version combines quantity-aware pricing, marketplace verification, seller behavior signals, and risk flags, then keeps the proof trail so your team can review and audit the decision later.</p>
+    <h2 id="what-is-a-supplier-scorecard-and-what-should-it-include-">What is a supplier scorecard and what should it include?</h2>
+    <p><img src="https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/a-printed-supplier-scorecard-beside.webp" alt="A printed supplier scorecard beside spec sheets and evidence folders, showing what to include – scorecard design"></p>
+    <p>A supplier scorecard is a structured rubric that converts marketplace evidence into comparable scores, so you can rank suppliers and explain why Supplier A beat Supplier B. For sourcing buyers, the scorecard should be built from signals you can actually observe on the vendor marketplace pages and validate during outreach, not abstract KPIs you cannot measure pre-sample.</p>
+    <p>A useful scorecard has three layers:</p>
+    <p><strong>1) Commercial reality (what you will actually pay).</strong> This is where most shortlists fail, because buyers compare the lowest advertised price instead of the price at their target quantity. Your scorecard needs price tiers by quantity, MOQ, and whether the tier includes packaging, customization, or shipping terms (even if the answer is “unknown yet”).</p>
+    <p><strong>2) Marketplace trust and operational signals (how likely they are to execute).</strong> On Alibaba that often means Trade Assurance eligibility, verification badges, years active (tenure), transaction or performance indicators shown on the profile, and responsiveness proxies. On 1688 it often means repurchase or reorder signals, store ratings, and platform behavior that correlates with reliability for domestic buyers.</p>
+    <p><strong>3) Risk flags and fit (why this supplier could burn you).</strong> Factory vs trading company cues, category mismatch, suspiciously broad catalogs, inconsistent company names across listings, or a price curve that looks engineered to bait clicks.</p>
+    <p>If you want a clean template, keep it tight. A scorecard that tries to capture everything becomes a spreadsheet you never finish. The goal is a defensible shortlist, not a dissertation.</p>
+    <p>A simple structure that holds up in a team review looks like this:</p>
+    <table>
+    <thead>
+    <tr>
+    <th>Scorecard area</th>
+    <th>What you record</th>
+    <th>Why it matters in real sourcing</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Quantity-aware pricing</td>
+    <td>Tiered price at your target quantity, MOQ, tier breaks</td>
+    <td>Prevents “low price bait” and makes comparisons fair</td>
+    </tr>
+    <tr>
+    <td>Verification and protections</td>
+    <td>Badges, verification status, Trade Assurance signals</td>
+    <td>Reduces counterparty risk and improves dispute options</td>
+    </tr>
+    <tr>
+    <td>Seller strength signals</td>
+    <td>Tenure, ratings, review volume, response proxies, repurchase</td>
+    <td>Suggests consistency and reduces the chance of ghosting</td>
+    </tr>
+    <tr>
+    <td>Fit and capability</td>
+    <td>Product focus, materials/process claims, customization, QA hints</td>
+    <td>Avoids suppliers who cannot actually build your spec</td>
+    </tr>
+    <tr>
+    <td>Risk flags</td>
+    <td>Duplicates, name inconsistencies, too-good-to-be-true tiers</td>
+    <td>Stops you from shortlisting avoidable problems</td>
+    </tr>
+    <tr>
+    <td>Evidence trail</td>
+    <td>Listing links, store links, screenshots/notes, date captured</td>
+    <td>Makes the decision auditable and easy to revisit</td>
+    </tr>
+    </tbody>
+    </table>
+    <p>If you are building this workflow specifically for Alibaba and 1688 browsing, it helps to work inside the pages you already use. BuyerPilot is built around that constraint: it stays on the marketplace pages with a movable ranking panel and shows which signals are driving the score, plus a score confidence indicator you can sanity-check before you trust the ranking.</p>
+    <h2 id="how-do-you-weight-price-tiers-verification-and-seller-signals-">How do you weight price tiers, verification, and seller signals?</h2>
+    <p>Vendor marketplace weighting is a risk management decision. The “right” weights depend on whether you are optimizing for lowest landed cost, fastest sampling, or lowest failure risk, but a scorecard should always make one thing non-negotiable: <strong>price must be evaluated at a quantity you intend to buy</strong>.</p>
+    <h3 id="weight-price-tiers-like-a-curve-not-a-single-number">Weight price tiers like a curve, not a single number</h3>
+    <p>A single unit price is easy to game. Tiered pricing is harder to fake because the curve has to make sense across quantities. When you score pricing, capture at least these fields: MOQ, tier 1 quantity and price, tier 2 quantity and price, and your target quantity price (or the closest tier). If the listing only shows a teaser price, score it as “unknown” and force it into outreach.</p>
+    <p>A practical weighting approach is to give pricing a strong but not dominant share of the total (many teams land around “largest single bucket” rather than “majority of the score”). The reason is simple: you can often negotiate price, but you cannot negotiate a supplier into being responsive, compliant, or honest.</p>
+    <h3 id="treat-verification-and-protections-as-risk-reducers">Treat verification and protections as risk reducers</h3>
+    <p>On Alibaba, Trade Assurance is not a guarantee of perfection, but it does change dispute dynamics because it routes more of the transaction inside Alibaba’s framework. Alibaba positions Trade Assurance as an order protection service with payment and shipping terms defined in the contract; you can read the current description on Alibaba’s own help pages and product materials, but the key sourcing takeaway is that it provides a clearer paper trail than off-platform payment arrangements. Use it as a positive signal, then still do your own checks.</p>
+    <p>Verification badges should be scored as evidence, not as a substitute for diligence. You are looking for consistency: the company identity, years active, and business scope should line up across the supplier profile and their best-performing listings.</p>
+    <h3 id="use-seller-signals-as-execution-proxies-not-vanity-metrics">Use seller signals as execution proxies, not vanity metrics</h3>
+    <p>Response rate, on-time delivery indicators, store ratings, and review patterns are proxies for operational behavior. They are imperfect, but they are better than nothing when you are still pre-sample. Where possible, anchor your interpretation in the platform’s own definitions. For example, Alibaba publishes explanations of metrics and platform programs across its help and seller documentation; use those definitions so your team is aligned on what a “response rate” actually measures on that platform.</p>
+    <p>On 1688, repurchase and reorder signals matter because they reflect repeat domestic buying behavior. A high repurchase signal does not automatically mean the factory is good for export compliance, but it is a strong indicator the seller fulfills orders consistently enough that buyers come back.</p>
+    <p>If you want a clean way to express weighting in a scorecard review, write it down as policy: “We weight price at target quantity higher than headline price; we treat verification and protections as risk reducers; we treat seller signals as execution proxies; we cap the effect of any single signal to avoid badge-chasing.” That last part prevents one shiny badge from overpowering weak pricing evidence or obvious risk flags.</p>
+    <h2 id="how-do-you-score-and-rank-suppliers-while-deduplicating-duplicates-">How do you score and rank suppliers while deduplicating duplicates?</h2>
+    <p><img src="https://fwxdribwlccxnmrdzsfs.supabase.co/storage/v1/object/public/article-images/8470d2cec5f19b17/ai/two-similar-listings-merged-into.webp" alt="Two similar listings merged into one supplier record, illustrating deduplication before ranking – supplier deduplication"></p>
+    <p>Scoring without deduplication creates fake choice. Alibaba and 1688 search results often show multiple listings that map back to the same supplier, sometimes under slightly different names or storefront variations. If you rank listings instead of suppliers, your “top 10” can quietly become “top 3 suppliers repeated.”</p>
+    <p>Deduplication is the step that turns browsing into a real shortlist.</p>
+    <h3 id="start-by-defining-the-supplier-as-the-unit-of-analysis">Start by defining the supplier as the unit of analysis</h3>
+    <p>A supplier is an external stakeholder that provides goods or services to your business. In sourcing, that definition matters because your risk and performance follow the supplier entity, not the individual listing. That is the practical version of supplier meaning in business, and it is why your scorecard should attach evidence to the supplier profile and store, then treat listings as supporting artifacts.</p>
+    <h3 id="score-with-inputs-you-can-defend-in-a-meeting">Score with inputs you can defend in a meeting</h3>
+    <p>A supplier performance metrics scorecard only works if each score maps to an observable input. “Seems professional” does not survive a team review. “Tenure shows 6+ years on-platform, store rating above X, repurchase signal present, and tiered price at 1,000 units is within our target” does.</p>
+    <p>If you want to make scoring less subjective, use a rubric that converts each signal into points with a written rule. Keep it simple and consistent. A good rubric has three properties:</p>
+    <ol>
+    <li>It is <strong>platform-specific</strong> (Alibaba signals differ from 1688 signals).</li>
+    <li>It is <strong>quantity-aware</strong> (pricing uses tiers and your target quantity).</li>
+    <li>It includes a <strong>confidence note</strong> when evidence is thin (new seller, missing tiers, limited reviews).</li>
+    </ol>
+    <p>BuyerPilot’s approach is exactly that: platform-specific extraction, supplier ranking, and confidence on the score so you can see when a supplier is “high” because the evidence is strong versus “high” because the page lacks data and the model is extrapolating conservatively. If duplicates are your daily pain, the <a href="https://buyerpilot.github.io/supplier-deduplication.html">automatic supplier deduplication across repeated listings</a> page shows the workflow conceptually, and why it matters before you ever export a list.</p>
+    <h3 id="keep-an-evidence-trail-that-survives-handoff">Keep an evidence trail that survives handoff</h3>
+    <p>A scorecard is only defensible if someone else can reproduce the inputs. That means you need links to the supplier store, the specific listing(s) you used for pricing tiers, and notes on any risk flags. If you are collaborating, a CSV export is the fastest way to keep the shortlist auditable in Sheets or Excel, then attach outreach notes and sample outcomes later. If you want that exportable workflow, <a href="https://buyerpilot.github.io/csv-supplier-export.html">Supplier CSV export with ranking inputs and links</a> is the clean handoff format most teams expect.</p>
+    <h2 id="what-does-a-good-scorecard-workflow-look-like-on-alibaba-and-1688-">What does a “good” scorecard workflow look like on Alibaba and 1688?</h2>
+    <p>A good workflow is one you can repeat under time pressure. It keeps you inside the marketplace, minimizes tab chaos, and produces a shortlist you can defend in a review with product, ops, and finance.</p>
+    <p>Here is the workflow we built BuyerPilot around, because it matches how sourcing buyers actually work.</p>
+    <h3 id="step-by-step-workflow-repeatable-in-one-sitting-">Step-by-step workflow (repeatable in one sitting)</h3>
+    <ol>
+    <li>Set your target quantity and your “walk-away” constraints (MOQ ceiling, target tier quantity, must-have verification or protections).</li>
+    <li>Search on Alibaba or 1688 and open candidates that look relevant, but do not start messaging yet.</li>
+    <li>Deduplicate to collapse repeated listings into supplier entities, then rank suppliers based on extracted signals and quantity-aware pricing.</li>
+    <li>Review the top set and annotate risk flags: business type cues (manufacturer vs trading company), catalog mismatch, unrealistic tier curves, inconsistent identity.</li>
+    <li>Export your shortlist with evidence links, then run outreach in batches with a standardized RFQ template.</li>
+    </ol>
+    <p>The key is that ranking happens before outreach. Outreach is expensive. It eats time, and it creates false momentum because “they replied quickly” can overshadow weak tier pricing or missing verification.</p>
+    <p>If you want to see the on-page workflow concept, <a href="https://buyerpilot.github.io/supplier-ranking-extension.html">Supplier ranking browser extension workflow and security model</a> explains how the panel sits on the marketplace page and why that matters for speed and evidence capture.</p>
+    <h3 id="alibaba-specifics-what-to-capture-for-a-defensible-scorecard">Alibaba specifics: what to capture for a defensible scorecard</h3>
+    <p>Start with pricing tiers and MOQ, then capture the trust layer: Trade Assurance eligibility, verification badges, and tenure. Add seller behavior signals shown on the platform, and finally capture fit cues like product focus and whether they look like a true manufacturer.</p>
+    <p>If you need a marketplace-specific breakdown of what gets extracted and compared, the <a href="https://buyerpilot.github.io/alibaba-supplier-ranking.html">Alibaba supplier ranking signals: pricing, ratings, tenure, Trade Assurance</a> page is the clean reference for what buyers usually want in the scorecard columns.</p>
+    <h3 id="1688-specifics-what-to-capture-that-alibaba-buyers-often-miss">1688 specifics: what to capture that Alibaba buyers often miss</h3>
+    <p>1688 is built for domestic China buying behavior, which means some of the strongest signals are different. Repurchase or reorder indicators and store ratings often carry more weight than export-facing badges. You still need tiered pricing and MOQ, but you should be extra strict about identity consistency and capability cues because the listing may be optimized for domestic buyers, not for your compliance needs.</p>
+    <p>For an English-readable view of the 1688 workflow and signals, <a href="https://buyerpilot.github.io/1688-supplier-ranking.html">1688 supplier ranking with repurchase signals and tiered pricing</a> maps well to a scorecard you can share with a non-Chinese-reading teammate.</p>
+    <h3 id="factory-vs-trading-company-cues-belong-in-the-scorecard-but-not-as-a-veto">Factory vs trading company cues belong in the scorecard, but not as a veto</h3>
+    <p>Teams often treat “trading company” as an automatic disqualifier. That is sloppy sourcing. Plenty of trading companies execute well, especially when they specialize and have strong QC processes. The scorecard should record business-type indicators as a signal, then let pricing tiers, verification, responsiveness, and risk flags do the heavy lifting.</p>
+    <p>If you want a practical way to score this without turning it into ideology, <a href="https://buyerpilot.github.io/manufacturer-vs-trading-company.html">manufacturer vs trading company indicators for sourcing decisions</a> lays out what to look for and how to treat it as one input among many.</p>
+    <h2 id="supplier-relationship-management-meaning-where-the-scorecard-fits-and-where-it-does-not-">Supplier relationship management meaning: where the scorecard fits (and where it does not)</h2>
+    <p>Supplier relationship management meaning, in practice, is the set of processes you use to onboard, measure, and improve supplier performance over time. A supplier scorecard is part of that system, but only one slice: it is strongest during discovery and shortlisting, then it should evolve into post-order metrics like defect rates, lead time adherence, and corrective action responsiveness.</p>
+    <p>If you try to force full SRM into an Alibaba/1688 shortlist scorecard, you will end up inventing numbers. Keep the pre-purchase scorecard focused on marketplace evidence plus what you can validate in RFQ and sampling.</p>
+    <p>A clean separation looks like this:</p>
+    <table>
+    <thead>
+    <tr>
+    <th>Stage</th>
+    <th>What you can score credibly</th>
+    <th>What you should not pretend to score yet</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Marketplace research</td>
+    <td>Tier pricing, MOQ, verification, tenure, ratings, repurchase, risk flags</td>
+    <td>True on-time delivery performance, true defect rate, audit outcomes</td>
+    </tr>
+    <tr>
+    <td>RFQ + sampling</td>
+    <td>Quote clarity, willingness to share specs, sample quality, communication</td>
+    <td>Long-term capacity constraints without proof</td>
+    </tr>
+    <tr>
+    <td>First production runs</td>
+    <td>On-time delivery, defect rate, packaging compliance, issue handling</td>
+    <td>“Strategic partner” status</td>
+    </tr>
+    <tr>
+    <td>Ongoing</td>
+    <td>Continuous improvement, cost-down roadmaps, supplier development</td>
+    <td>None, this is where SRM becomes real</td>
+    </tr>
+    </tbody>
+    </table>
+    <p>If your team uses a supplier management system later (ERP, SRM, or procurement suite), your marketplace scorecard becomes the intake record. That is why the evidence trail and export matter: you want your supplier registration step to start with clean, deduped supplier identities and links to what you saw when you made the call.</p>
+    <p>For a neutral baseline on why procurement teams formalize supplier evaluation, the UK Chartered Institute of Procurement and Supply (CIPS) publishes practical guidance on supplier evaluation and performance management; their resources are a good sanity check when you are defining what “defensible” means in procurement terms: <a href="https://www.cips.org/knowledge/procurement-topics-and-skills/supplier-relationship-management/">CIPS SRM Knowledge Guide</a>.</p>
+    <h2 id="why-should-a-purchasing-specialist-evaluate-supplier-performance-before-shortlisting-">Why should a purchasing specialist evaluate supplier performance before shortlisting?</h2>
+    <p>Why should a purchasing specialist evaluate supplier performance before shortlisting? Because the cost of being wrong shows up late, when it is expensive: failed samples, missed ship dates, quality rework, and internal blame. A lightweight scorecard is how you push that risk forward, while you still have optionality.</p>
+    <p>Marketplace signals are not perfect measures of performance, but they are early indicators you can use to avoid obvious traps: duplicate suppliers masquerading as variety, teaser pricing that collapses at your quantity, and sellers with thin history or inconsistent identity.</p>
+    <p>If you want a widely accepted external framework for thinking about supplier evaluation criteria, ISO 9001 is often used as a reference point for supplier control and evaluation in quality management systems. You do not need to be ISO certified to use the logic, but the principles are useful when you define what evidence you want to keep in your scorecard: <a href="https://www.iso.org/standard/62085.html">ISO 9001 Quality Management standard</a>.</p>
+    <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+    <p><strong>What should a supplier scorecard look like?</strong><br>A good supplier scorecard is a one-page rubric that ties every score to observable evidence: tiered pricing at your target quantity, verification/protection signals, seller behavior proxies, and risk flags. It should also keep links to the supplier store and the listings used for pricing.</p>
+    <p><strong>How do you evaluate your suppliers?</strong><br>Start with marketplace evidence (tiers, MOQ, verification, tenure, ratings, repurchase), then validate through RFQ and samples. After your first orders, switch to real performance metrics like defect rate, lead time adherence, and issue resolution speed.</p>
+    <p><strong>What are the 5 key supplier evaluation criteria?</strong><br>For pre-shortlist sourcing, the most defensible five are quantity-aware pricing, verification/protections, seller execution signals, capability fit, and risk flags. Post-order, replace proxies with actual delivery and quality data.</p>
+    <p><strong>What does supplier information mean?</strong><br>Supplier information is the identity and evidence you need to assess and onboard a supplier: company name consistency, marketplace profile, product scope, verification status, and commercial terms like MOQ and tier pricing. In a scorecard, it is the proof trail behind the score.</p>
+    <p><strong>What is another word for deduplication?</strong><br>Common alternatives are de-duplication, duplicate removal, or record consolidation. In supplier research, the intent is the same: collapse repeated listings into a single supplier entity before ranking.</p>
+    <p>A defensible shortlist is usually built before you send a single message: dedupe the marketplace noise, score suppliers on tier pricing and trust signals you can point to, and export the evidence so your team can review it quickly. Start by picking one product category, define your target quantity, and build your first scorecard in a spreadsheet, then tighten it until it takes under an hour to produce a top-10 you would be comfortable defending.</p>
+  </article>
+</div>
+</main>
+</body>
+</html>
