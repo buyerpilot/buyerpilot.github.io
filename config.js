@@ -1,6 +1,6 @@
 /* BuyerPilot website configuration */
 window.SOURCEPILOT_CONFIG = {
-  siteUrl: "https://buyerpilot.github.io/",
+  siteUrl: "https://buyerpilot.pages.dev/",
   supportEmail: "hellobuyerpilot@gmail.com",
   telegramUrl: "https://t.me/buyerpilot",
   tutorialsPageUrl: "tutorials.html",
@@ -18,7 +18,7 @@ window.SOURCEPILOT_CONFIG = {
 
   trialPageUrl: "trial.html",
 
-  starterCheckoutUrl: "https://checkout.dodopayments.com/buy/pdt_0NkTQ8TRw54f8tZi0Z8Sq?quantity=1&redirect_url=https%3A%2F%2Fbuyerpilot.github.io%2Fsuccess.html",
-  proCheckoutUrl: "https://checkout.dodopayments.com/buy/pdt_0NkTT6dP7jmSpOUVS5xou?quantity=1&redirect_url=https%3A%2F%2Fbuyerpilot.github.io%2Fsuccess.html",
-  lifetimeCheckoutUrl: "https://checkout.dodopayments.com/buy/pdt_0NkTTKNzQFFZrWp9jL04a?quantity=1&redirect_url=https%3A%2F%2Fbuyerpilot.github.io%2Fsuccess.html"
+  starterCheckoutUrl: "https://checkout.dodopayments.com/buy/pdt_0NkTQ8TRw54f8tZi0Z8Sq?quantity=1&redirect_url=https%3A%2F%2Fbuyerpilot.pages.dev%2Fsuccess.html",
+  proCheckoutUrl: "https://checkout.dodopayments.com/buy/pdt_0NkTT6dP7jmSpOUVS5xou?quantity=1&redirect_url=https%3A%2F%2Fbuyerpilot.pages.dev%2Fsuccess.html",
+  lifetimeCheckoutUrl: "https://checkout.dodopayments.com/buy/pdt_0NkTTKNzQFFZrWp9jL04a?quantity=1&redirect_url=https%3A%2F%2Fbuyerpilot.pages.dev%2Fsuccess.html"
 };

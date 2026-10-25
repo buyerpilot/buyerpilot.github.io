@@ -2,22 +2,22 @@
 
 BuyerPilot is a browser extension for comparing, deduplicating and ranking suppliers selected from Alibaba and 1688. It is designed for first-stage supplier research, sourcing shortlists and evidence-based comparison before samples, quotations and final commercial due diligence.
 
-Canonical website: https://buyerpilot.github.io/
+Canonical website: https://buyerpilot.pages.dev/
 Chrome Web Store: https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak
 Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/buyerpilot/dhembhggjgankceogaimilnhpibbkhbh
 Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/buyerpilot/
-Tutorials: https://buyerpilot.github.io/tutorials.html
-Alibaba supplier comparison guide: https://buyerpilot.github.io/alibaba-supplier-ranking.html
-1688 supplier comparison guide: https://buyerpilot.github.io/1688-supplier-ranking.html
-China supplier vetting guide: https://buyerpilot.github.io/china-supplier-vetting.html
-Amazon FBA and private-label sourcing guide: https://buyerpilot.github.io/amazon-fba-private-label-sourcing.html
-Alibaba vs 1688 sourcing guide: https://buyerpilot.github.io/alibaba-vs-1688-sourcing.html
-Manufacturer vs trading company guide: https://buyerpilot.github.io/manufacturer-vs-trading-company.html
-Supplier deduplication guide: https://buyerpilot.github.io/supplier-deduplication.html
-Supplier ranking browser extension guide: https://buyerpilot.github.io/supplier-ranking-extension.html
-CSV supplier export guide: https://buyerpilot.github.io/csv-supplier-export.html
-Pricing: https://buyerpilot.github.io/#pricing
-Privacy: https://buyerpilot.github.io/privacy.html
+Tutorials: https://buyerpilot.pages.dev/tutorials.html
+Alibaba supplier comparison guide: https://buyerpilot.pages.dev/alibaba-supplier-ranking.html
+1688 supplier comparison guide: https://buyerpilot.pages.dev/1688-supplier-ranking.html
+China supplier vetting guide: https://buyerpilot.pages.dev/china-supplier-vetting.html
+Amazon FBA and private-label sourcing guide: https://buyerpilot.pages.dev/amazon-fba-private-label-sourcing.html
+Alibaba vs 1688 sourcing guide: https://buyerpilot.pages.dev/alibaba-vs-1688-sourcing.html
+Manufacturer vs trading company guide: https://buyerpilot.pages.dev/manufacturer-vs-trading-company.html
+Supplier deduplication guide: https://buyerpilot.pages.dev/supplier-deduplication.html
+Supplier ranking browser extension guide: https://buyerpilot.pages.dev/supplier-ranking-extension.html
+CSV supplier export guide: https://buyerpilot.pages.dev/csv-supplier-export.html
+Pricing: https://buyerpilot.pages.dev/#pricing
+Privacy: https://buyerpilot.pages.dev/privacy.html
 
 Core capabilities:
 - Alibaba supplier comparison and ranking

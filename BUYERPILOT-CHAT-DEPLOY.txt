@@ -2,7 +2,7 @@ BuyerPilot website with Tawk.to live chat
 
 This package already includes the current email-only trial flow.
 
-Upload/replace the website files in the buyerpilot.github.io repository.
+Upload/replace the website files in the buyerpilot.pages.dev repository.
 
 Tawk.to widget:
 https://embed.tawk.to/6a8187b3dcdbf81d4fafbbe5/1k04vk5o4

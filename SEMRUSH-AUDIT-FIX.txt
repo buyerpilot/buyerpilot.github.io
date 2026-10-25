@@ -13,8 +13,8 @@ FIXED
 INTENTIONAL / NOT A BUYERPILOT DEFECT
 - manage.html and trial.html are intentionally noindex utility pages. Semrush may label these as blocked; they should not rank in Google.
 - privacy.html may remain "Content not optimized". It is a legal/privacy page and should be accurate, not keyword-stuffed.
-- www.buyerpilot.github.io returns 404/TLS/SNI/HSTS warnings because GitHub user sites use buyerpilot.github.io, not a www subdomain. Do not use www.buyerpilot.github.io.
+- www.buyerpilot.pages.dev returns 404/TLS/SNI/HSTS warnings because GitHub user sites use buyerpilot.pages.dev, not a www subdomain. Do not use www.buyerpilot.pages.dev.
 
 After deployment, rerun Semrush using the canonical URL:
-https://buyerpilot.github.io/
-not https://buyerpilot.github.io/index.html
+https://buyerpilot.pages.dev/
+not https://buyerpilot.pages.dev/index.html

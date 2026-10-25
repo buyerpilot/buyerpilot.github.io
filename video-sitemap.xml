@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://buyerpilot.github.io/tutorials.html</loc>
+    <loc>https://buyerpilot.pages.dev/tutorials.html</loc>
     <video:video>
-      <video:thumbnail_loc>https://buyerpilot.github.io/buyerpilot-walkthrough-poster.webp</video:thumbnail_loc>
+      <video:thumbnail_loc>https://buyerpilot.pages.dev/buyerpilot-walkthrough-poster.webp</video:thumbnail_loc>
       <video:title><![CDATA[BuyerPilot complete supplier ranking walkthrough]]></video:title>
       <video:description><![CDATA[A real-screen BuyerPilot walkthrough from selecting Alibaba and 1688 listings to a deduplicated ranked supplier shortlist.]]></video:description>
-      <video:content_loc>https://buyerpilot.github.io/buyerpilot-walkthrough.mp4</video:content_loc>
+      <video:content_loc>https://buyerpilot.pages.dev/buyerpilot-walkthrough.mp4</video:content_loc>
       <video:duration>94</video:duration>
       <video:publication_date>2026-08-15T00:00:00+05:30</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
