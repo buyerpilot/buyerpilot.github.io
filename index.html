@@ -36,4 +36,184 @@
 <script defer="" src="script.min.js?v=11.3"></script>
 <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
 <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="googlebot"/>
-<script
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://buyerpilot.pages.dev/#organization",
+      "name": "BuyerPilot",
+      "alternateName": "Buyer Pilot",
+      "url": "https://buyerpilot.pages.dev/",
+      "logo": "https://buyerpilot.pages.dev/buyerpilot-icon-512.png",
+      "email": "hellobuyerpilot@gmail.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak",
+        "https://microsoftedge.microsoft.com/addons/detail/buyerpilot/dhembhggjgankceogaimilnhpibbkhbh",
+        "https://addons.mozilla.org/en-US/firefox/addon/buyerpilot/",
+        "https://t.me/buyerpilot"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hellobuyerpilot@gmail.com",
+        "availableLanguage": ["English", "Hindi"]
+      }
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://buyerpilot.pages.dev/#brand",
+      "name": "BuyerPilot",
+      "alternateName": "Buyer Pilot",
+      "url": "https://buyerpilot.pages.dev/",
+      "logo": "https://buyerpilot.pages.dev/buyerpilot-icon-512.png",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak",
+        "https://microsoftedge.microsoft.com/addons/detail/buyerpilot/dhembhggjgankceogaimilnhpibbkhbh",
+        "https://addons.mozilla.org/en-US/firefox/addon/buyerpilot/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://buyerpilot.pages.dev/#website",
+      "url": "https://buyerpilot.pages.dev/",
+      "name": "BuyerPilot",
+      "alternateName": "Buyer Pilot",
+      "publisher": {"@id": "https://buyerpilot.pages.dev/#organization"},
+      "inLanguage": "en",
+      "description": "Official BuyerPilot website for the Alibaba and 1688 supplier comparison and ranking browser extension."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://buyerpilot.pages.dev/#webpage",
+      "url": "https://buyerpilot.pages.dev/",
+      "name": "BuyerPilot – Official Alibaba & 1688 Supplier Comparison Extension",
+      "isPartOf": {"@id": "https://buyerpilot.pages.dev/#website"},
+      "about": {"@id": "https://buyerpilot.pages.dev/#software"},
+      "publisher": {"@id": "https://buyerpilot.pages.dev/#organization"},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://buyerpilot.pages.dev/#software",
+      "name": "BuyerPilot",
+      "alternateName": "Buyer Pilot",
+      "url": "https://buyerpilot.pages.dev/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Supplier comparison browser extension",
+      "operatingSystem": "Windows, macOS, Linux",
+      "browserRequirements": "Google Chrome, Microsoft Edge or Mozilla Firefox",
+      "description": "BuyerPilot is a browser extension that compares, deduplicates and ranks Alibaba and 1688 suppliers using marketplace data and quantity-aware pricing.",
+      "publisher": {"@id": "https://buyerpilot.pages.dev/#organization"},
+      "brand": {"@id": "https://buyerpilot.pages.dev/#brand"},
+      "downloadUrl": "https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/buyerpilot/gigofafeclimniglcoiinejhefhkmoak",
+        "https://microsoftedge.microsoft.com/addons/detail/buyerpilot/dhembhggjgankceogaimilnhpibbkhbh",
+        "https://addons.mozilla.org/en-US/firefox/addon/buyerpilot/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://buyerpilot.pages.dev/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"How reliable is the BuyerPilot supplier ranking?","acceptedAnswer":{"@type":"Answer","text":"BuyerPilot is designed to identify and rank the strongest suppliers using the marketplace information available during the scan. It completes the time-consuming comparison work and gives you a highly useful, evidence-based shortlist. Before placing a final order, confirm current pricing, specifications, samples and commercial terms directly with the selected supplier."}},
+        {"@type":"Question","name":"Does Alibaba use the same calculation as 1688?","acceptedAnswer":{"@type":"Answer","text":"No. Alibaba and 1688 expose different supplier fields, so BuyerPilot keeps their extraction, ranking and CSV export logic separate."}},
+        {"@type":"Question","name":"How does automatic supplier deduplication work?","acceptedAnswer":{"@type":"Answer","text":"When several selected product listings belong to the same seller, BuyerPilot consolidates them into one supplier record before ranking. The supplier keeps its relevant product links, but repeated listings cannot fill multiple positions in the final shortlist."}},
+        {"@type":"Question","name":"Which plans include CSV export and advanced ranking priorities?","acceptedAnswer":{"@type":"Answer","text":"Free Trial and Starter include Standard ranking. Price Focused, Quality Focused and complete CSV export are available on Pro and Founder Lifetime. Locked options remain visible in the extension so the upgrade requirement is clear."}},
+        {"@type":"Question","name":"What happens when Alibaba or 1688 shows CAPTCHA or verification?","acceptedAnswer":{"@type":"Answer","text":"BuyerPilot does not bypass verification. Scanning pauses, the affected page remains available, and you can complete the marketplace verification manually before restarting the ranking process."}},
+        {"@type":"Question","name":"Why is complete CSV export a Pro feature?","acceptedAnswer":{"@type":"Answer","text":"The CSV contains the supplier intelligence behind the final rank: prices, ratings, tenure, business type, marketplace status, repeat-purchase data, confidence and source links. It lets you audit the comparison, keep permanent sourcing records and share research outside the browser."}},
+        {"@type":"Question","name":"What does Score Confidence mean?","acceptedAnswer":{"@type":"Answer","text":"Score Confidence shows how much of the weighted ranking data was actually available for that supplier. A lower-confidence result may still be useful, but it should be reviewed more carefully."}},
+        {"@type":"Question","name":"Is BuyerPilot affiliated with Alibaba or 1688?","acceptedAnswer":{"@type":"Answer","text":"No. BuyerPilot is an independent browser extension and is not endorsed by, operated by or affiliated with Alibaba.com or 1688.com."}},
+        {"@type":"Question","name":"Which browsers are supported?","acceptedAnswer":{"@type":"Answer","text":"BuyerPilot supports Google Chrome, Microsoft Edge and Mozilla Firefox on desktop. Official BuyerPilot listings are available in the Chrome Web Store, Microsoft Edge Add-ons and Mozilla Firefox Add-ons."}}
+      ]
+    }
+  ]
+}
+</script>
+<script defer src="support-chat.min.js?v=1.0"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="BuyerPilot home" class="brand brand-primary" href="https://buyerpilot.pages.dev/">
+<span aria-hidden="true" class="brand-mark"><img alt="" height="44" src="favicon.svg" width="44"/></span>
+<span class="brand-name">BuyerPilot</span>
+</a>
+<nav aria-label="Primary navigation" class="desktop-nav compact-nav">
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-trigger" type="button">Product <span aria-hidden="true">▾</span></button>
+<div class="nav-dropdown-menu">
+<a href="#demo"><strong>Product demo</strong><span>See live supplier ranking</span></a>
+<a href="#features"><strong>Features</strong><span>What BuyerPilot does</span></a>
+<a href="#scoring"><strong>How scoring works</strong><span>Ranking inputs and confidence</span></a>
+<a href="tutorials.html"><strong>Tutorials</strong><span>Step-by-step guides</span></a>
+</div>
+</div>
+<a href="blog.html">Blog</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="manage.html">Manage subscription</a>
+</nav>
+<div class="nav-actions">
+<a class="button button-primary button-small" data-checkout="trial" href="#pricing">Start free trial</a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-button" data-menu-button="" type="button"><span></span><span></span><span></span></button>
+</div>
+</div>
+<nav aria-label="Mobile navigation" class="mobile-menu" data-mobile-menu="">
+<a href="#demo">Product demo</a>
+<a href="tutorials.html">Tutorials</a>
+<a href="blog.html">Blog</a>
+<a href="#features">Features</a>
+<a href="#scoring">How scoring works</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="manage.html">Manage subscription</a>
+<a data-checkout="trial" href="#pricing">Start 7-day free trial</a>
+</nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="hero-badge"><span class="pulse"></span> Live supplier rankings on Alibaba + 1688</div>
+<h1><span class="gradient-text">BuyerPilot</span>: Compare and rank Alibaba &amp; 1688 suppliers with evidence, not tabs.</h1>
+<p>BuyerPilot selects, scans, automatically deduplicates and ranks suppliers using quantity-aware pricing, ratings, seller tenure, repeat-purchase signals, business information and marketplace verification—directly on the pages you already use.</p>
+<div class="hero-actions">
+<a class="button button-primary" data-checkout="trial" href="#pricing">Start 7-Day Free Trial <span aria-hidden="true">→</span></a>
+<a class="button button-secondary" href="tutorials.html">Watch tutorial videos</a>
+</div>
+<ul class="hero-points">
+<li>Standard ranking included in trial</li>
+<li>Automatic supplier deduplication</li>
+<li>Pro unlocks CSV + advanced profiles</li>
+</ul>
+</div>
+<div aria-label="BuyerPilot supplier ranking overview" class="hero-card">
+<img alt="Actual 1688 search results with selected products and the BuyerPilot supplier ranking panel" class="hero-showcase-image" height="900" src="hero-buyerpilot.webp" width="1600"/>
+<div aria-label="BuyerPilot ranking workflow" class="hero-proof-row">
+<span><b>12</b> selected products</span><i>→</i><span><b>11</b> unique suppliers</span><i>→</i><span><b>1</b> ranked shortlist</span>
+</div>
+<p class="hero-image-caption">Actual marketplace workflow. The panel stays on the Alibaba or 1688 page and can be moved anywhere on screen.</p>
+</div>
+</div>
+</section>
+<section aria-label="Product highlights" class="trust-strip">
+<div class="container trust-grid">
+<div class="trust-item"><strong>Alibaba + 1688</strong><span>Separate data and ranking logic</span></div>
+<div class="trust-item"><strong>Quantity-aware pricing</strong><span>Compare applicable product tiers</span></div>
+<div class="trust-item"><strong>Score confidence</strong><span>See when supplier data is limited</span></div>
+<div class="trust-item"><strong>Automatic deduplication</strong><span>One seller cannot occupy repeated ranks</span></div>
+</div>
+</section>
+<section class="section browser-support-section" id="browser-support">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">Use BuyerPilot in your browser</span>
+<h2>Supported on Chrome, Microsoft Edge and Firefox</h2>
+<p>Install BuyerPilot from the official Chrome Web Store, Microsoft Edge Add-ons, or Mozilla Firefox Add-ons listings.</p>
+</div>
+<div class="browser-support-grid">
+<a class
